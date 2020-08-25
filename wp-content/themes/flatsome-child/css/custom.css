@@ -545,6 +545,9 @@ body {
 }
 
 /*=====  Shop  ======*/
+.archive .page-title-inner {
+    display: none;
+}
 .products.row .col {
     flex-basis: 30% !important;
     max-width: 30% !important;
@@ -574,31 +577,88 @@ body {
 }
 .filter-block {
     display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: #f8f8f8;
+    width: max-content;
+    margin: 50px auto;
+    padding: 8px 15px;
 }
 .filter-block .bapf_sfilter .bapf_hascolarr {
     font-weight: normal;
     font-size: 14px;
     text-transform: uppercase;
     cursor: pointer;
+    margin-bottom: 0;
+    padding-right: 0;
+    color: #929090;
+}
+.filter-block .bapf_sfilter .bapf_hascolarr:hover {
+    color: #000000;
+}
+
+.filter-block .bapf_sfilter .bapf_hascolarr:after {
+    content: "|";
+    color: #d2d6d9;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.filter-block:after {
+    display: none;
 }
 .filter-block .bapf_sfilter .bapf_colaps_smb {
     display: none !important;
 }
+.filter-block .bapf_sfilter {
+    margin-bottom: 0;
+}
+
 .filter-block .bapf_sfilter .bapf_body ul {
     display: flex;
     position: absolute;
+    left: 50%;
+    top: 8.5%;
+    transform: translateX(-50%);
 }
 .filter-block .bapf_sfilter .bapf_body ul li {
     background-color: #f8f8f8;
     border-radius: 12px;
     padding: 5px 10px !important;
+    margin-right: 15px !important;
+}
+.filter-block .bapf_sfilter .bapf_body ul li:last-child {
+    margin-right: 0 !important;
+}
+.filter-block .bapf_sfilter .bapf_body ul li:hover{ 
+    box-shadow: 0 0 7px 0 #000;
+    transition: all .3s ease;
 }
 .filter-block .bapf_sfilter .bapf_body ul li label {
     color: #000;
     font-weight: normal;
+    margin-bottom: 5px;
 }
+
+
+/*=====  Footer  ======*/
+.footer-wrapper .footer-1 {
+    background: #F3FBFF;
+    padding-top: 45px;
+}
+.footer-wrapper .footer-1 .custom-html-widget {
+    width: 50%;
+    margin: 0 auto;
+}
+.footer-wrapper .footer-1 .wpcf7-form-control {
+    background-color: #ffffff;
+}
+.footer-wrapper .footer-widgets .custom-html-widget .button {
+    background: #777;
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+
 
 
 /* Add Animation */
