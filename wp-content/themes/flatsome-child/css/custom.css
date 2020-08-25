@@ -545,6 +545,12 @@ body {
 }
 
 /*=====  Shop  ======*/
+.shop-banner {
+    padding-top: 70px;
+}
+.shop-banner img {
+    width: 100%;
+}
 .archive .page-title-inner {
     display: none;
 }
@@ -595,15 +601,11 @@ body {
 .filter-block .bapf_sfilter .bapf_hascolarr:hover {
     color: #000000;
 }
-
 .filter-block .bapf_sfilter .bapf_hascolarr:after {
     content: "|";
     color: #d2d6d9;
     padding-left: 10px;
     padding-right: 10px;
-}
-.filter-block:after {
-    display: none;
 }
 .filter-block .bapf_sfilter .bapf_colaps_smb {
     display: none !important;
@@ -806,7 +808,4 @@ body {
         flex: 1 0 auto;
         width: 100%;
     }
-}
-.header-wrapper {
-    display: none;
 }
