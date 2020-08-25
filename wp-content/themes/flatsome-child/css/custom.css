@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap');
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+}
+
+.section.product-lenses {
+    width: 100%;
+    /*margin: 0px auto;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f7f7f7;
+}
+
+.section.lens-prescription {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(231, 231, 231);
+    margin: 0px auto;
+    text-align: center;
+}
+
+.product-lenses .product-row .product-card h3, .product-lenses .product-row .product-card p {
+    text-align: center;
+}
+
+.product-lenses .product-row .product-card .product-card-inner {
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px 30px 30px;
+    cursor: pointer;
+}
+
+.product-lenses .product-row .product-card .product-card-inner p:first-of-type {
+    color: #cc6666;
+    margin-bottom: 0px;
+}
+
+.page-template-lens-usage .product-lenses .product-row .product-card .product-card-inner {
+    height: 200px;
+}
+
+.custom-sidebar .product-details {
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    padding: 15px 15px 30px 10px;
+}
+
+.selected-title {
+    color: rgba(102, 102, 102, 0.7);
+    font-weight: normal;
+}
+
+.custom-sidebar .product-details .product-image h3 {
+    text-align: center;
+}
+
+.page-template-lens-prescription .custom-sidebar .product-details {
+    background-color: #ffffff;
+}
+
+.lens-type-price {
+    float: right;
+    word-spacing: 5px;
+}
+
+.prescription-edit-btn {
+    color: #cc6666;
+    text-decoration: underline;
+}
+
+.prescription-edit-btn:hover {
+    color: #cc3e34;
+}
+
+/* Lens Prescription Style */
+.page-template-lens-prescription .Prescription-form {
+    background-color: #f7f7f7;
+    padding: 5% 5% 7% 5%;
+}
+
+.page-template-lens-prescription .form-container {
+    width: 100%;
+    display: inline-flex;
+    /*margin-left: 10%;*/
+}
+
+.page-template-lens-prescription .form-container label {
+    font-weight: normal;
+}
+
+.page-template-lens-prescription .details, .page-template-lens-usage .details, .page-template-lens-thinkness .details {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.page-template-lens-prescription .Label-row {
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+
+.page-template-lens-prescription select#dropdown-one {
+    border: 1px solid #d6d6d6;
+    background: #fffffff2;
+    -webkit-appearance: button;
+    height: 68px;
+    width: auto;
+}
+
+.page-template-lens-prescription .d-one {
+    border-radius: 7px 0px 0px 7px;
+    border-right: 0px !important;
+}
+
+.page-template-lens-prescription .d-three {
+    border-radius: 0px 7px 7px 0px;
+    border-left: 0px !important;
+}
+
+.page-template-lens-prescription a {
+    color: #484848;
+}
+
+.page-template-lens-prescription .l-four {
+    margin-left: 7%;
+}
+
+.page-template-lens-prescription .d-four {
+    border-radius: 7px;
+}
+
+.page-template-lens-prescription .col-1 {
+    display: inline-block;
+    float: left;
+    width: 6%;
+}
+
+.page-template-lens-prescription form.col-2 {
+    width: 100%;
+    /*margin-left: 13.5%;*/
+}
+
+.page-template-lens-prescription form.col-2 .row-one .label-1 {
+    float: left;
+    width: 55px;
+    margin-top: 35px;
+}
+
+.page-template-lens-prescription form.col-2 .row-two .label-2 {
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.page-template-lens-prescription .os-left {
+    display: inline-flex;
+}
+
+.page-template-lens-prescription .Label-row-2.l-four {
+    margin-left: 9%;
+}
+
+.page-template-lens-prescription .col-3 {
+    width: 25%;
+}
+
+.page-template-lens-prescription .box {
+    background-color: #e3e2e2;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.page-template-lens-prescription .box form {
+    padding: 0%;
+    padding-left: 18%;
+}
+
+.page-template-lens-prescription .buttons {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.page-template-lens-prescription button {
+    padding: 13px 25px 13px 25px;
+    max-width: 230px;
+    width: 100%;
+    font-weight: 700;
+}
+
+.page-template-lens-prescription button.b1 {
+    color: #2085da;
+    border: 1px solid #209fe3;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.page-template-lens-prescription button.b2 {
+    background-color: #cc6666;
+    color: white;
+    border: 1px solid #cc6666;
+    border-radius: 3px;
+}
+
+.page-template-lens-prescription option {
+    box-shadow: 5px 5px 5px #d4d4d4;
+    background: #fff
+}
+
+/* Loader Style */
+#cover-spin {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999999999;
+    display: none;
+}
+
+.prescription-error {
+    border-right: 1px solid #ff0000 !important;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#cover-spin::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 40%;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: black;
+    border-top-color: transparent;
+    border-width: 4px;
+    border-radius: 50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+
+.product-main {
+    padding: 20px 0 !important;
+}
+
+.page-template-customize-php .breadcrumbs {
+    margin-top: 30px;
+}
+
+.breadcrumbs {
+    margin: 0px auto;
+    display: table;
+    margin-bottom: 20px;
+}
+
+/* Cart page variation styling */
+.variation-popup {
+    width: 65%;
+    margin: 0px auto;
+}
+
+.nested-prescription__details {
+    background-color: #fff;
+    overflow: auto;
+}
+
+.variation .co-prescription-table {
+    background-color: #fff;
+    border: 1px solid silver;
+    border-radius: 4px;
+    margin: 0 .9375rem 1.25rem;
+    overflow: hidden;
+}
+
+.variation .co-prescription-table .columns {
+    padding: 0px;
+}
+
+.nested-prescription__table {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.variation .nested-prescription__details .row.collapse:after, .variation .nested-prescription__details .row.collapse:before {
+    content: " ";
+    display: table;
+}
+
+.variation .nested-prescription__details .co-param-col {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.variation .nested-prescription__details .co-param-col .empty-col {
+    background-color: #fff !important;
+}
+
+.variation .co-prescription-table .co-param-col-label, .variation .co-prescription-table .co-param-row-label {
+    background-color: #f0f0f0;
+    color: #666;
+    font-weight: 600;
+}
+
+.variation .co-prescription-table .co-param-col .co-param-col-label, .variation .co-prescription-details .co-param-row-label {
+    background-color: #f0f0f0;
+    color: #666;
+    font-weight: 600;
+}
+
+.variation .co-prescription-table .co-prod-param {
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 3.125rem;
+    min-height: 3.125rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.co-prod-param {
+    display: block;
+    text-align: left;
+    float: left;
+    line-height: 1.25rem;
+    min-height: 1.25rem;
+    margin-bottom: .5625rem;
+}
+
+.variation .co-prescription-table .co-prod-param-value {
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+.nested-prescription__trigger-panel {
+    float: left;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.dropdown-trigger:hover {
+    cursor: pointer;
+}
+
+.dropdown-wrapper .dropdown-trigger {
+    font-size: .875rem;
+    font-weight: 600;
+    padding-top: .9375rem;
+    padding-bottom: .625rem;
+}
+
+.nested-prescription__title {
+    color: #cc6666 !important;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.71rem;
+}
+
+.small-4 {
+    width: 33.3333333333% !important;
+}
+
+.variation .co-prescription-table .co-param-col .is_dualpd {
+    transform: translateY(50%);
+    z-index: 1;
+}
+
+.variation:last-child {
+    border-bottom: none;
+}
+
+/* Modal Styling */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    background-clip: padding-box;
+    border-radius: 5px;
+}
+
+.modal-info, .lens-prescription-info {
+    /*padding: 0px 20px 0px 20px;*/
+}
+
+.modal-info p, .lens-prescription-info p {
+    margin-bottom: .5em !important;
+}
+
+.frame-lens-heading, .frame-lens-details {
+    padding-left: 15px;
+}
+
+.disabled-text {
+    position: absolute;
+    z-index: 999;
+    top: 30%;
+    text-align: center;
+    padding: 10px;
+    color: #000000;
+    width: 91%;
+    background-color: #ffffff;
+    line-height: 22px;
+}
+
+.disabled-inner-card {
+    background-color: rgba(0, 0, 0, 0.5019607843137255) !important;
+    pointer-events: none;
+}
+
+.lens-cart-btn button {
+    background-color: #cc6666;
+    color: white;
+    border: 1px solid #cc6666;
+    border-radius: 3px;
+    padding: 5px 25px 5px 25px;
+    max-width: 230px;
+    width: 100%;
+    font-weight: 900;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.woocommerce-cart .primary.is-underline, .woocommerce-cart .primary.is-link, .woocommerce-cart .primary.is-outline {
+    background-color: #cc6666 !important;
+    color: #ffffff !important;
+}
+
+.woocommerce-cart .is-form, .woocommerce-cart button.is-form, .woocommerce-cart input[type='submit'].is-form, .woocommerce-cart input[type='reset'].is-form, .woocommerce-cart input[type='button'].is-form {
+    border: 1px solid #cc6666 !important;
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+.secondary, .checkout-button, .button.checkout, .button.alt {
+    background-color: #cc6666 !important;
+}
+
+.woocommerce-cart input[type='submit'], .woocommerce-cart input[type='submit'].button, .woocommerce-cart input[type='submit'], .primary {
+    background-color: #cc6666 !important;
+}
+
+.woocommerce-cart .is-outline:hover, .woocommerce-cart .primary.is-outline:hover {
+    border-color: #cc6666 !important;
+}
+
+.buttons_added .minus, .buttons_added .plus {
+    background-color: #cc6666 !important;
+    text-shadow: none !important;
+    color: #ffffff !important;
+}
+
+.woocommerce-checkout .page-checkout .localpickup {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 30px 30px;
+}
+
+.woocommerce-checkout .page-checkout .localpickup a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.woocommerce-checkout .page-checkout .localpickup.active {
+    border: 3px solid #cc6666;
+}
+
+.page-template-lens-thinkness table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.page-template-lens-thinkness th, td {
+    text-align: left;
+    padding: 10px 10px !important;
+    text-transform: none;
+}
+
+.page-template-lens-thinkness tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.wc-no-matching-variations {
+    display: none !important;
+}
+
+/*=====  header  ======*/
+.header-wrapper {
+    box-shadow: none;
+}
+
+/*=====  Shop  ======*/
+.products.row .col {
+    flex-basis: 30% !important;
+    max-width: 30% !important;
+    margin-right: 3%;
+    padding-top: 30px;
+}
+.product-small .box-text {
+    padding-top: 3.5em;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+}
+.product-small .box-text .product-title a {
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 30px;
+}
+.product-small .box-text .price-wrapper .amount {
+    font-weight: normal;
+}
+.xt_woovs-swatches .swatch-image.xt_woovs-round_corner .swatch-inner {
+    border-radius: 100%;
+}
+.xt_woovs-archives-product .cart.xt_woovs-support .variations {
+    padding-top: 0;
+}
+.filter-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-block .bapf_sfilter .bapf_hascolarr {
+    font-weight: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.filter-block .bapf_sfilter .bapf_colaps_smb {
+    display: none !important;
+}
+.filter-block .bapf_sfilter .bapf_body ul {
+    display: flex;
+    position: absolute;
+}
+.filter-block .bapf_sfilter .bapf_body ul li {
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    padding: 5px 10px !important;
+}
+.filter-block .bapf_sfilter .bapf_body ul li label {
+    color: #000;
+    font-weight: normal;
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    color: #000000;
+    float: right;
+    padding-right: 10px;
+}
+
+.modal-body {
+    padding-top: 20px;
+}
+
+.modal-body h5 {
+    margin: 0 auto 40px auto;
+    font-size: 20px;
+    text-align: center;
+    line-height: 32px;
+    padding: 0 40px 0 40px;
+}
+
+.modal-body h4 {
+    margin: 0 auto 20px auto;
+    line-height: 32px;
+    padding: 0 0px 0 15px;
+}
+
+.modal-body .lens-prescription-info h4 {
+    padding-left: 0px;
+}
+
+.modal-body h6 {
+    text-align: center;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.customize-cart-btn {
+    background-color: #cc6666 !important;
+}
+
+.shop_table ul li, .checkout ul li {
+    float: left;
+    padding: 10px 10px;
+}
+
+/* Responsive Queries */
+
+@media (min-width: 320px) {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    .variation-popup {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 480px) {
+    /* smartphones, Android phones, landscape iPhone */
+    .variation-popup {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .variation-popup {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    .variation .nested-prescription__details .co-param-col {
+        border-bottom: 1px solid silver;
+        flex-direction: row;
+    }
+
+    .variation .co-prescription-table .co-prod-param {
+        border-right: 1px solid silver;
+        flex: 1 1 10%;
+        min-width: 10%;
+    }
+
+    .variation .co-prescription-table .co-prod-param:last-of-type {
+        border-right: none;
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    .co-prod-param.co-param-row-label {
+        width: 6.25rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .variation .co-prescription-table .co-param-col {
+        border-right: 1px solid silver;
+        flex-direction: column;
+    }
+
+    .variation .co-prescription-table .co-prod-param {
+        border-bottom: 1px solid silver;
+        flex: 1 0 auto;
+        width: 100%;
+    }
+}
+.header-wrapper {
+    display: none;
+}
