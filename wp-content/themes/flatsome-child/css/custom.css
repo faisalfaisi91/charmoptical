@@ -588,6 +588,7 @@ body {
     width: max-content;
     margin: 50px auto;
     padding: 8px 15px;
+    position: relative;
 }
 .filter-block .bapf_sfilter .bapf_hascolarr {
     font-weight: normal;
@@ -613,12 +614,13 @@ body {
 .filter-block .bapf_sfilter {
     margin-bottom: 0;
 }
-
 .filter-block .bapf_sfilter .bapf_body ul {
     display: flex;
+    align-items: center;
     position: absolute;
     left: 50%;
-    top: 8.5%;
+    top: 55px;
+    width: max-content;
     transform: translateX(-50%);
 }
 .filter-block .bapf_sfilter .bapf_body ul li {
