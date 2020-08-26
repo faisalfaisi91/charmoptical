@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 ?>
 <div class="shop-banner">
-	<img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/banner.svg' ?>">
+	 <img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/banner.svg' ?>">
 </div>
 <div class="filter-block">
 <?php 
