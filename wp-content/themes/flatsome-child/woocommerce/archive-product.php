@@ -19,7 +19,10 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 ?>
-<div>
+<div class="shop-banner">
+	 <img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/banner.svg' ?>">
+</div>
+<div class="filter-block">
 <?php 
 echo do_shortcode('[br_filters_group group_id=555]');
 ?>
