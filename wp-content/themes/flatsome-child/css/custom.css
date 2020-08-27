@@ -642,6 +642,35 @@ body {
     margin-bottom: 5px;
 }
 
+.information-block {
+    width: 45%;
+    margin: 0 auto;
+}
+.information-block .d-flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f4f4;
+    padding: 40px;
+}
+.information-block h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.information-block strong {
+    /* padding-left: 30px; */
+}
+.d-inline {
+    display: flex;
+}
+.mb-2 {
+    margin-bottom: 5px;
+}
+.w-120 {
+    min-width: 120px;
+}
+
+
 
 /*=====  Footer  ======*/
 .footer-wrapper .footer-1 {

@@ -27,6 +27,35 @@ get_header( 'shop' );
 echo do_shortcode('[br_filters_group group_id=555]');
 ?>
 </div>
+<div class="information-block">
+	<h1>Information</h1>
+	<div class="d-flex">
+		<div>
+			<div class="mb-2 d-inline">
+				<div class="w-120">Modal Code</div>
+				<div><strong>G3239V</strong></div>
+			</div>
+			<div class="mb-2 d-inline">
+				<div class="w-120">Frame Shape</div>
+				<div><strong>Round</strong></div>
+			</div>
+			<div class="d-inline">
+				<div class="w-120">Front Color</div>
+				<div><strong>Rose</strong></div>
+			</div>
+		</div>
+		<div>
+			<div class="mb-2 d-inline">
+				<div class="w-120">Fitting</div>
+				<div><strong>Standard</strong></div>
+			</div>
+			<div class="d-inline">
+				<div class="w-120">Frame Material</div>
+				<div><strong>Acetate</strong></div>
+			</div>
+		</div>
+	</div>
+</div>
 <?php
 // Add Custom Shop Content if set
 if(is_shop() && flatsome_option('html_shop_page_content') && ! $wp_query->is_search() && $wp_query->query_vars['paged'] < 1 ){
