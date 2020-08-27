@@ -36,3 +36,16 @@ if(is_shop() && flatsome_option('html_shop_page_content') && ! $wp_query->is_sea
 }
 
 get_footer( 'shop' );
+?>
+<script>
+// 	jQuery('.bapf_ocolaps').click(function () {
+//     var filter_title = jQuery(this).attr('id');
+// 	jQuery('.filter-block .bapf_body').css('display', 'none');
+//     setTimeout(function () {
+//         var filter_colapse_style = jQuery('#' + filter_title + ' .bapf_body').css('display');
+//         if (filter_colapse_style == 'none') {
+//             jQuery('#' + filter_title + ' .bapf_body').toggle('display', 'block');
+//         }
+//     }, 500);
+// });
+</script>

@@ -545,9 +545,9 @@ body {
 }
 
 /*=====  Shop  ======*/
-.shop-banner {
+/* .shop-banner {
     padding-top: 70px;
-}
+} */
 .shop-banner img {
     width: 100%;
 }
@@ -642,6 +642,33 @@ body {
     margin-bottom: 5px;
 }
 
+.information-block {
+    width: 45%;
+    margin: 0 auto;
+}
+.information-block .d-flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f4f4;
+    padding: 40px;
+}
+.information-block h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.information-block strong {
+    /* padding-left: 30px; */
+}
+.d-inline {
+    display: flex;
+}
+.mb-2 {
+    margin-bottom: 5px;
+}
+.w-120 {
+    min-width: 120px;
+}
 
 /*=====  Footer  ======*/
 .footer-wrapper .footer-1 {
@@ -748,6 +775,24 @@ body {
 .shop_table ul li, .checkout ul li {
     float: left;
     padding: 10px 10px;
+}
+
+/* The table containing the list of products and our custom elements */
+.woocommerce-cart .woocommerce-cart-form {
+  flex: 1 0 70%; /* 100% at small screens; 70% on larger screens */
+  margin-right: 30px;
+}
+
+/* The element that contains the cart totals */
+.woocommerce-cart .cart-collaterals {
+  flex: 1 0 30%; /* 100% at small screens; 30% on larger screens */
+  margin-left: 30px;
+}
+
+/* Some minor tweak to make sure the cart totals fill the space */
+.woocommerce-cart .cart-collaterals .cart_totals {
+  width: 100%;
+  padding: 0 20px 70px;
 }
 
 /* Responsive Queries */

@@ -44,7 +44,40 @@ $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 $tab_count   = 0;
 $panel_count = 0;
-
+/**
+ * Custom Information section
+ */
+?>
+<div class="information-block">
+	<h1>Information</h1>
+	<div class="d-flex">
+		<div>
+			<div class="mb-2 d-inline">
+				<div class="w-120">Modal Code</div>
+				<div><strong><?php echo get_field('model_code', $product_id); ?></strong></div>
+			</div>
+			<div class="mb-2 d-inline">
+				<div class="w-120">Frame Shape</div>
+				<div><strong><?php echo get_field('frame_shape', $product_id); ?></strong></div>
+			</div>
+			<div class="d-inline">
+				<div class="w-120">Front Color</div>
+				<div><strong><?php echo get_field('front_color', $product_id); ?></strong></div>
+			</div>
+		</div>
+		<div>
+			<div class="mb-2 d-inline">
+				<div class="w-120">Fitting</div>
+				<div><strong><?php echo get_field('fitting', $product_id); ?></strong></div>
+			</div>
+			<div class="d-inline">
+				<div class="w-120">Frame Material</div>
+				<div><strong><?php echo get_field('frame_material', $product_id); ?></strong></div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
 if ( ! empty( $product_tabs ) ) : ?>
 
 	<div class="woocommerce-tabs wc-tabs-wrapper container tabbed-content">

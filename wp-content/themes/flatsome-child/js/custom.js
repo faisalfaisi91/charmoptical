@@ -16,7 +16,7 @@ jQuery(document).ready(function () {
         jQuery.ajax({
             type: "post",
             url: ajax_url,
-            data: {frame_value: frame_value},
+            data: { frame_value: frame_value },
             success: function (response) {
                 //location.href = baseUrl + '/lens-thinkness';
             },
@@ -115,7 +115,7 @@ function selectLensType(lense_id, lense_name, product_id) {
     jQuery.ajax({
         type: "post",
         url: ajax_url,
-        data: {lense_id: lense_id, lense_name: lense_name, product_id: product_id},
+        data: { lense_id: lense_id, lense_name: lense_name, product_id: product_id },
         success: function (response) {
             location.href = baseUrl + '/lens-prescription';
         },
@@ -131,7 +131,7 @@ function selectLensUsage(lens_id, lens_name) {
     jQuery.ajax({
         type: "post",
         url: ajax_url,
-        data: {lens_id: lens_id, lens_name: lens_name},
+        data: { lens_id: lens_id, lens_name: lens_name },
         success: function (response) {
             location.href = baseUrl + '/lens-usage';
         },
@@ -147,7 +147,7 @@ function addItemToCart(variation_id) {
     jQuery.ajax({
         type: "post",
         url: ajax_url,
-        data: {variation_id: variation_id},
+        data: { variation_id: variation_id },
         success: function (response) {
             location.href = baseUrl + '/cart';
         },
@@ -168,7 +168,7 @@ function getConfirmationPopup(term_id, usage) {
     jQuery.ajax({
         type: "post",
         url: ajax_url,
-        data: {term_id: term_id, usage: usage},
+        data: { term_id: term_id, usage: usage },
         success: function (response) {
             jQuery('#cover-spin').hide(0);
             jQuery('.modal-body').html(response);
@@ -180,3 +180,25 @@ function getConfirmationPopup(term_id, usage) {
         }
     });
 }
+
+jQuery(document).ready(function () {
+    jQuery('.xt_woovs-swatches-wrap table.variations tr td').each(function () {
+        $this = jQuery(this);
+        $label_thinkness = jQuery('label[for="pa_lens-thinkness"]');
+        $label_lens_type = jQuery('label[for="pa_lens-type"]');
+        $label_lens_usage = jQuery('label[for="pa_lens-usage"]');
+
+        if ($label_thinkness.length > 0) {
+            //this input has a label associated with it, lets do something!
+            jQuery($label_thinkness).closest("tr").remove();
+        }
+        if ($label_lens_type.length > 0) {
+            //this input has a label associated with it, lets do something!
+            jQuery($label_lens_type).closest("tr").remove();
+        }
+        if ($label_lens_usage.length > 0) {
+            //this input has a label associated with it, lets do something!
+            jQuery($label_lens_usage).closest("tr").remove();
+        }
+    });
+});

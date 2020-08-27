@@ -234,3 +234,72 @@ if (!function_exists('wdm_remove_user_custom_data_options_from_cart')) {
         }
     }
 }
+/**
+* Change text strings
+*
+* @link http://codex.wordpress.org/Plugin_API/Filter_Reference/gettext
+*/
+function custom_related_products_text( $translated_text, $text, $domain ) {
+  switch ( $translated_text ) {
+    case 'Related products' :
+      $translated_text = __( 'Other items you might like', 'woocommerce' );
+      break;
+  }
+  return $translated_text;
+}
+add_filter( 'gettext', 'custom_related_products_text', 20, 3 );
+
+/**
+ * Moving the payments
+ */
+add_action( 'woocommerce_checkout_shipping', 'my_custom_display_payments', 20 );
+
+/**
+ * Displaying the Payment Gateways 
+ */
+function my_custom_display_payments() {
+  if ( WC()->cart->needs_payment() ) {
+    $available_gateways = WC()->payment_gateways()->get_available_payment_gateways();
+    WC()->payment_gateways()->set_current_gateway( $available_gateways );
+  } else {
+    $available_gateways = array();
+  }
+  ?>
+  <div id="payment">
+    <h3><?php esc_html_e( 'Payment', 'woocommerce' ); ?></h3>
+    <?php if ( WC()->cart->needs_payment() ) : ?>
+    <ul class="wc_payment_methods payment_methods methods">
+    <?php
+    if ( ! empty( $available_gateways ) ) {
+      foreach ( $available_gateways as $gateway ) {
+        wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
+      }
+    } else {
+      echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'woocommerce' ) ) . '</li>'; // @codingStandardsIgnoreLine
+    }
+    ?>
+    </ul>
+  <?php endif; ?>
+  </div>
+<?php
+}
+
+/**
+ * Adding the payment fragment to the WC order review AJAX response
+ */
+add_filter( 'woocommerce_update_order_review_fragments', 'my_custom_payment_fragment' );
+
+/**
+ * Adding our payment gateways to the fragment #checkout_payments so that this HTML is replaced with the updated one.
+ */
+function my_custom_payment_fragment( $fragments ) {
+	ob_start();
+
+	my_custom_display_payments();
+
+	$html = ob_get_clean();
+
+	$fragments['#checkout_payments'] = $html;
+
+	return $fragments;
+}
