@@ -62,14 +62,19 @@ $lens_types = get_terms('pa_lens-type');
                             <section class="section product-lenses">
                                 <div class="section-content relative">
                                     <div class="row align-middle product-row" id="row-809642893">
-                                        <?php foreach ($lens_types as $type) {
+                                        <?php foreach ($lens_types as $type) {                                            
                                             $term = get_term_meta($type->term_id, 'lens_price');
+                                            if (function_exists('get_wp_term_image'))
+                                                {
+                                                    $meta_image = get_wp_term_image($type->term_id); 
+                                                    //It will give category/term image url 
+                                                }
                                             ?>
                                             <div class="col medium-6 small-12 large-6 product-card"
                                                  onclick="selectLensType('<?php echo $type->term_id ?>','<?php echo $type->slug; ?>','<?php echo $productID; ?>')">
                                                 <div class="col-inner box-shadow-3 box-shadow-5-hover product-card-inner">
                                                     <div class="image-block">
-                                                        <img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/glasses-icon.svg' ?>">
+                                                        <img src="<?php echo $meta_image; ?>">
                                                     </div>
                                                     <h3><?php echo $type->name; ?></h3>
                                                     <p class="product-detail"><?php echo $type->description; ?></p>

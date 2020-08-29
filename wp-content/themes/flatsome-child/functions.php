@@ -194,7 +194,9 @@ function custom_wc_get_formatted_cart_item_data($cart_item, $flat = false)
 // Remove the additional information tab
 function woo_remove_product_tabs($tabs)
 {
-    unset($tabs['additional_information']);
+    unset( $tabs['description'] );          // Remove the description tab
+    unset( $tabs['reviews'] );          // Remove the reviews tab
+    unset( $tabs['additional_information'] );   // Remove the additional information tab
     return $tabs;
 }
 
