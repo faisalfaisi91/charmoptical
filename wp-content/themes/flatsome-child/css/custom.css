@@ -545,11 +545,12 @@ body {
 }
 
 /*=====  Shop  ======*/
-/* .shop-banner {
-    padding-top: 70px;
-} */
+.shop-banner {
+    height:  470px;
+}
 .shop-banner img {
     width: 100%;
+    height: 100%;
 }
 .archive .page-title-inner {
     display: none;
@@ -586,7 +587,7 @@ body {
     align-items: center;
     background-color: #f8f8f8;
     width: max-content;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 8px 15px;
     position: relative;
 }
