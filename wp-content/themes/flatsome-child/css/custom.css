@@ -680,10 +680,14 @@ body {
 }
 .product-main .product-info {
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .17);
+    height: 100%;
+    padding-bottom: 0;
+    padding-top: 25px;
 }
 .product-main .product-info h1 {
     font-weight: 500;
     color: #000 !important;
+    text-align: center;
 }
 .product-main .product-info .is-divider {
     display: none;
@@ -692,6 +696,7 @@ body {
     font-size: 30px;
     color: #333;
     margin-top: 18px;
+    text-align: center;
 }
 .product-main .product-info .woocommerce-Price-currencySymbol {
     font-size: 30px;
