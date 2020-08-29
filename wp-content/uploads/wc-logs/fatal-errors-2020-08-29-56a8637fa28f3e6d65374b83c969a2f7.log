@@ -1,0 +1,10 @@
+2020-08-29T10:24:51+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Variable::get_the_ID() in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php:311
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): content_add_below_prod_gallery('')
+#1 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /Library/WebServer/Documents/charmoptical/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/single-product/layouts/product-no-sidebar.php(67): do_action('woocommerce_aft...')
+#4 /Library/WebServer/Documents/charmoptical/wp-includes/template.php(725): require('/Library/WebSer...')
+#5 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(197): load_template('/Library/WebSer...', false)
+#6 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-ch in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php on line 311
+

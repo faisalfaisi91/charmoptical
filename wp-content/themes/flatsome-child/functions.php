@@ -303,3 +303,14 @@ function my_custom_payment_fragment( $fragments ) {
 
 	return $fragments;
 }
+add_action( 'woocommerce_after_add_to_cart_button', 'add_content_after_addtocart_button_func' );
+
+function add_content_after_addtocart_button_func() {
+global $product;
+$product_details = $product->get_data();
+$product_full_description = $product_details['description'];
+
+// Echo content.
+echo '<div class="second_content">'.$product_full_description.'</div>';
+
+}
