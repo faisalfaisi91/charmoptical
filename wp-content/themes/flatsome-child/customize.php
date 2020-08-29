@@ -48,6 +48,15 @@ $lens_types = get_terms('pa_lens-type');
                     <a href="javascript:;"><?php echo $post->post_title; ?></a>
                 </nav>
                 <div class="product-main">
+                    <div class="container">
+                        <div class="sub-heading">
+                            <p>Prescription Type</p>
+                            <span class="active"><i class="fa fa-circle"></i></span>
+                            <span><i class="fa fa-circle"></i></span>
+                            <span><i class="fa fa-circle"></i></span>
+                            <span><i class="fa fa-circle"></i></span>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col medium-8">
                             <section class="section product-lenses">
@@ -59,9 +68,12 @@ $lens_types = get_terms('pa_lens-type');
                                             <div class="col medium-6 small-12 large-6 product-card"
                                                  onclick="selectLensType('<?php echo $type->term_id ?>','<?php echo $type->slug; ?>','<?php echo $productID; ?>')">
                                                 <div class="col-inner box-shadow-3 box-shadow-5-hover product-card-inner">
+                                                    <div class="image-block">
+                                                        <img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/glasses-icon.svg' ?>">
+                                                    </div>
                                                     <h3><?php echo $type->name; ?></h3>
-                                                    <p><?php echo $term[0] ?></p>
-                                                    <p><?php echo $type->description; ?></p>
+                                                    <p class="product-detail"><?php echo $type->description; ?></p>
+                                                    <p class="product-price"><?php echo $term[0] ?></p>
                                                 </div>
                                             </div>
                                         <?php } ?>
