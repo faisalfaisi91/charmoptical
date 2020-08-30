@@ -698,6 +698,14 @@ body {
     margin-top: 18px;
     text-align: center;
 }
+.product-main .product-info .label {
+    vertical-align: sub;
+    padding-bottom: 0 !important;
+}
+.product-main .product-info .swatch-inner.swatch-color-inner {
+    width: 30px !important;
+    height: 30px !important;
+}
 .product-main .product-info .woocommerce-Price-currencySymbol {
     font-size: 30px;
 }
@@ -776,20 +784,20 @@ body {
 .page-template-customize .sub-heading .active .fa {
     font-size: 10px;
 }
-.page-template-customize .row {
+.product-lenses-block {
     background: #f7f7f7;
     align-items: center;
 }
 .page-template-customize .section.product-lenses {
     background-color: transparent;
 }
-.page-template-customize .custom-sidebar .product-details {
+.custom-sidebar .product-details {
     background-color: #ffffff;
 }
-.page-template-customize .custom-sidebar .product-details h3 {
+.custom-sidebar .product-details h3 {
     margin-top: 15px;
 }
-.page-template-customize .custom-sidebar .product-details .selected-items {
+.custom-sidebar .product-details .selected-items {
     font-weight: 600;
 }
 .page-template-customize .product-lenses .product-row .product-card .product-card-inner {
@@ -817,6 +825,59 @@ body {
     font-weight: 600;
 }
 
+/*=====  /*=====  Prescription  ======*/
+.page-template-lens-prescription select#dropdown-one {
+    height: 43px;
+    cursor: pointer;
+}
+.page-template-lens-prescription .Prescription-form {
+    background-color: #ffffff;
+}
+.page-template-lens-prescription .Prescription-form .breadcrumbs {
+    display: none;
+}
+.page-template-lens-prescription .prescription-form-block {
+    background-color: #f8f6f8;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.page-template-lens-prescription .prescription-form-block .row {
+    align-items: center;
+}
+.page-template-lens-prescription .form-container {
+    height: 100%;
+}
+.page-template-lens-prescription .form-container label {
+    font-weight: 600;
+}
+.page-template-lens-prescription button {
+    padding: 7px 25px 7px 25px
+}
+.page-template-lens-prescription button.b2 {
+    background-color: #f4d531;
+    border: 0;
+    font-size: 20px;
+    color: #000;
+}
+
+/*=====  Modal Info  ======*/
+.modal-info .close {
+    color: #cdcdcd;
+}
+.modal-info h4 {
+    color: #333333;
+}
+.modal-info th {
+    color: #333333;
+}
+.modal-info .frame-lens-details label {
+    margin-bottom: 0;
+}
+.modal-info .frame-lens-details .lens-type-price {
+    color: #333333;
+}
 /*=====  Footer  ======*/
 .footer-wrapper .footer-1 {
     background: #F3FBFF;

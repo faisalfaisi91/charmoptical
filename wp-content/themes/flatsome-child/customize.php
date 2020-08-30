@@ -57,7 +57,7 @@ $lens_types = get_terms('pa_lens-type');
                             <span><i class="fa fa-circle"></i></span>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row product-lenses-block">
                         <div class="col medium-8">
                             <section class="section product-lenses">
                                 <div class="section-content relative">
