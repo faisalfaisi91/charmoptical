@@ -58,54 +58,74 @@ if ( flatsome_option( 'facebook_login_checkout' ) && get_option( 'woocommerce_en
 }
 ?>
 
+
 <form name="checkout" method="post" class="checkout woocommerce-checkout <?php echo esc_attr( $wrapper_classes ); ?>" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
-	<div class="row pt-0 <?php echo esc_attr( $row_classes ); ?>">
-	<div class="large-12 col">
-			<?php if ( get_theme_mod( 'checkout_sticky_sidebar', 0 ) ) { ?>
-			<div class="is-sticky-column">
-				<div class="is-sticky-column__inner">
-					<?php } ?>
+  <div class="row checkout-details pt-0 <?php echo esc_attr( $row_classes ); ?>">
+  <div class="large-12 col">
+      <?php if ( get_theme_mod( 'checkout_sticky_sidebar', 0 ) ) { ?>
+      <div class="is-sticky-column">
+        <div class="is-sticky-column__inner">
+          <?php } ?>
 
-					<div class="col-inner <?php echo esc_attr( $sidebar_classes ); ?>">
-						<div class="checkout-sidebar sm-touch-scroll">
-							<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
-
-							<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-							<div id="order_review" class="woocommerce-checkout-review-order">
-								<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+          <div class="col-inner <?php echo esc_attr( $sidebar_classes ); ?>">
+						<div class="checkout-details-block">
+							<h2 class="text-center">Your Order</h2>
+							<div class="order-detail">
+								<div class="order-detail-img">
+									<img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/glasses-icon.svg' ?>">
+								</div>
+								<div class="order-detail-description">
+									<h2>Glasses Modal Name</h2>
+									<div>
+										<div class="bold-text">Prescription Type</div>
+										<div class="grey-text">Single Vision</div>
+									</div>
+									<div>
+										<div class="bold-text">Lens Type</div>
+										<div class="grey-text">Blue Light Filtering</div>
+									</div>
+									<div>
+										<div class="bold-text">Lens Material</div>
+										<div class="grey-text">1.56 Index</div>
+									</div>
+								</div>
 							</div>
-							<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+							<div class="sub-total">
+								<div class="bold-text">Subtotal</div>
+								<div class="bold-text">$109.99</div>
+							</div>
 						</div>
-					</div>
+          </div>
 
-					<?php if ( get_theme_mod( 'checkout_sticky_sidebar', 0 ) ) { ?>
-				</div>
-			</div>
-		<?php } ?>
-		</div>	
-	<div class="large-12 col  <?php echo esc_attr( $main_classes ); ?>">
-			<?php if ( $checkout->get_checkout_fields() ) : ?>
+          <?php if ( get_theme_mod( 'checkout_sticky_sidebar', 0 ) ) { ?>
+        </div>
+      </div>
+    <?php } ?>
+    </div>  
+  <div class="large-12 col  <?php echo esc_attr( $main_classes ); ?>">
+      <?php if ( $checkout->get_checkout_fields() ) : ?>
 
-				<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+        <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-				<div id="customer_details">
-					<div class="clear">
-						<?php do_action( 'woocommerce_checkout_billing' ); ?>
-					</div>
+        <div id="customer_details">
+          <div class="clear">
+            <?php do_action( 'woocommerce_checkout_billing' ); ?>
+          </div>
 
-					<div class="clear">
-						<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-					</div>
-				</div>
+          <div class="clear">
+            <?php do_action( 'woocommerce_checkout_shipping' ); ?>
+          </div>
+        </div>
 
-				<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+        <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
-			<?php endif; ?>
+      <?php endif; ?>
 
-		</div>
+    </div>
 
-	</div>
+  </div>
 </form>
+
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

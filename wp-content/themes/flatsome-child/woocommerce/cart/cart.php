@@ -35,7 +35,7 @@ $main_classes = implode(' ', $main_classes);
 $sidebar_classes = implode(' ', $sidebar_classes);
 
 do_action('woocommerce_before_cart'); ?>
-<div class="woocommerce row <?php echo $row_classes; ?>">
+<div class="woocommerce row shopping-cart <?php echo $row_classes; ?>">
     <div class="col large-8 pb-0 <?php echo $main_classes; ?>">
 
         <?php wc_print_notices(); ?>
@@ -213,7 +213,7 @@ do_action('woocommerce_before_cart'); ?>
                                 <h3 class="widget-title"><?php echo get_flatsome_icon('icon-tag'); ?><?php esc_html_e('Coupon', 'woocommerce'); ?></h3>
                                 <input type="text" name="coupon_code" class="input-text" id="coupon_code" value=""
                                        placeholder="<?php esc_attr_e('Coupon code', 'woocommerce'); ?>"/> <input
-                                        type="submit" class="is-form expand" name="apply_coupon"
+                                        type="submit" class="is-form expand apply-coupon" name="apply_coupon"
                                         value="<?php esc_attr_e('Apply coupon', 'woocommerce'); ?>"/>
                                 <?php do_action('woocommerce_cart_coupon'); ?>
                             </div>

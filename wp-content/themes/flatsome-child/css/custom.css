@@ -698,6 +698,14 @@ body {
     margin-top: 18px;
     text-align: center;
 }
+.product-main .product-info .label {
+    vertical-align: sub;
+    padding-bottom: 0 !important;
+}
+.product-main .product-info .swatch-inner.swatch-color-inner {
+    width: 30px !important;
+    height: 30px !important;
+}
 .product-main .product-info .woocommerce-Price-currencySymbol {
     font-size: 30px;
 }
@@ -779,20 +787,20 @@ body {
 .page-template-customize .sub-heading .active .fa {
     font-size: 10px;
 }
-.page-template-customize .product-main .row {
+.product-lenses-block {
     background: #f7f7f7;
     align-items: center;
 }
 .page-template-customize .section.product-lenses {
     background-color: transparent;
 }
-.page-template-customize .custom-sidebar .product-details {
+.custom-sidebar .product-details {
     background-color: #ffffff;
 }
-.page-template-customize .custom-sidebar .product-details h3 {
+.custom-sidebar .product-details h3 {
     margin-top: 15px;
 }
-.page-template-customize .custom-sidebar .product-details .selected-items {
+.custom-sidebar .product-details .selected-items {
     font-weight: 600;
 }
 .page-template-customize .product-lenses .product-row .product-card .product-card-inner {
@@ -818,6 +826,338 @@ body {
     margin-bottom: 0;
     color: #cc6666;
     font-weight: 600;
+}
+
+/*=====  /*=====  Prescription  ======*/
+.page-template-lens-prescription select#dropdown-one {
+    height: 43px;
+    cursor: pointer;
+}
+.page-template-lens-prescription .Prescription-form {
+    background-color: #ffffff;
+}
+.page-template-lens-prescription .Prescription-form .breadcrumbs {
+    display: none;
+}
+.page-template-lens-prescription .prescription-form-block {
+    background-color: #f8f6f8;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.page-template-lens-prescription .prescription-form-block .row {
+    align-items: center;
+}
+.page-template-lens-prescription .form-container {
+    height: 100%;
+}
+.page-template-lens-prescription .form-container label {
+    font-weight: 600;
+}
+.page-template-lens-prescription button {
+    padding: 7px 25px 7px 25px
+}
+.page-template-lens-prescription button.b2 {
+    background-color: #f4d531;
+    border: 0;
+    font-size: 18px;
+    color: #000;
+}
+.page-template-lens-prescription button.b2:hover {
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
+}
+
+/*=====  Modal Info  ======*/
+.modal-info .close {
+    color: #cdcdcd;
+}
+.modal-info h4 {
+    color: #333333;
+}
+.modal-info th {
+    color: #333333;
+}
+.modal-info .frame-lens-details label {
+    margin-bottom: 0;
+}
+.modal-info .frame-lens-details .lens-type-price {
+    color: #333333;
+}
+.modal-info .prescription-edit-btn {
+    color: #333333;
+}
+.modal-info .lens-cart-btn {
+    margin-top: 20px;
+}
+.modal-info .lens-cart-btn button {
+    background-color: #f4d531;
+    border: 0;
+    font-size: 18px;
+    color: #000;
+}
+.modal-info .lens-cart-btn button:hover {
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
+}
+
+/*=====  Shopping Cart  ======*/
+.shopping-cart {
+    background-color: #f9f7f9;
+    padding: 20px;
+}
+.shopping-cart th {
+    color: #333333;
+}
+.shopping-cart .woocommerce-cart-form {
+    background-color: #ffffff;
+    margin-right: 0 !important;
+    padding: 10px;
+}
+.shopping-cart .buttons_added {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.shopping-cart .buttons_added .minus {
+    background-color: transparent !important;
+    padding: 0 10px !important;
+}
+.shopping-cart .buttons_added .plus {
+    background-color: transparent !important;
+    padding: 0 8px !important;
+}
+.woocommerce-cart input[type='button'].is-form {
+    border: 0 !important;
+    color: #333 !important;
+}
+.shopping-cart .quantity input[type="number"] {
+    box-shadow: none !important;
+    border: 0 !important
+}
+.shopping-cart .nested-prescription__title {
+    color: #333333 !important;
+}
+.woocommerce-cart .primary.is-outline {
+    background-color: #333333 !important;
+}
+.woocommerce-cart .primary.is-outline:hover {
+    opacity: 0.6;
+    border-color: #333 !important;
+}
+.woocommerce-cart .row-divided>.col+.col:not(.large-12) {
+    border-left: 0;
+}
+.cart_totals tbody th {
+    font-weight: 600 !important;
+}
+.woocommerce-cart .cart-collaterals .cart_totals {
+    padding: 0 0 70px !important;
+}
+.shopping-cart .wc-proceed-to-checkout a {
+    background-color: #f4d531 !important;
+    border: 0;
+    color: #000;
+    padding-top: 4px;
+    padding-bottom: 4px
+}
+.woocommerce-cart input[type='submit'] {
+    background-color: #f4d531 !important;
+}
+.woocommerce-cart input[type='submit'].is-form {
+    border: 0 !important;
+    color: #000 !important;
+    font-weight: 600;
+    font-size: 18px;
+}
+.woocommerce-cart .shipping__table.shipping__table--multiple td {
+    padding: 0 !important;
+    border: 0 !important;
+}
+.woocommerce-cart .shipping__table.shipping__table--multiple ul li {
+    padding: 10px 0 !important;
+}
+.woocommerce-cart .shipping__table.shipping__table--multiple ul li label {
+    padding-right: 15px;
+}
+.shipping__table--multiple .woocommerce-shipping-calculator {
+    text-align: right !important;
+    line-height: 32px;
+    margin-top: 0 !important;
+}
+.shipping-calculator-form {
+    background-color: transparent !important;
+}
+.shipping__table.shipping__table--multiple .form-row .select2-container {
+    margin-bottom: 0 !important;
+}
+.shipping__table.shipping__table--multiple input[type='text'] {
+    box-shadow: none !important;
+}
+.shipping__table.shipping__table--multiple input[type='text']:focus {
+    box-shadow: none !important;
+}
+.shipping__table.shipping__table--multiple input:hover {
+    box-shadow: none !important;
+}
+.shipping__table.shipping__table--multiple .woocommerce-shipping-calculator .shipping-calculator-button {
+    color: #333333;
+    text-decoration: underline;
+}
+.shipping__table.shipping__table--multiple .woocommerce-shipping-calculator button[type="submit"] {
+    background-color: #333333 !important;
+}
+/*=====  Radio button  ======*/
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 5px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #333;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/*=====  Checkout  ======*/
+.checkout-details {
+    display: block;
+}
+.woocommerce-NoticeGroup-checkout ul li {
+    display: block;
+}
+.checkout-details .has-border{
+    border: none;
+}
+.checkout-details h2 {
+    color: #333333;
+}
+.checkout-details h3 {
+    color: #333333;
+    font-size: 25px !important;
+    text-align: center;
+}
+.checkout-details-block .order-detail {
+    display: flex;
+    justify-content: center;
+}
+.checkout-details-block .order-detail .order-detail-img img{
+    width: 200px;
+}
+.checkout-details-block .order-detail .order-detail-description {
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.checkout-details .bold-text {
+    font-weight: 600;
+    color: #333;
+}
+.checkout-details .grey-text {
+    color: #767676;
+    font-weight: 600;
+}
+.checkout-details-block .sub-total {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    padding-top: 70px;
+    border-bottom: 1px dotted #333;
+}
+.checkout-details .woocommerce-billing-fields {
+    border-top: 0;
+}
+.checkout-details .input-text {
+    height: 45px;
+    border-radius: 8px;
+    box-shadow: none;
+}
+.checkout-details .select2-selection {
+    height: 45px !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+.checkout-details .country_select {
+    height: 45px !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+.checkout-details .state_select {
+    height: 45px !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+.checkout-details #billing_city_field {
+    width: 31%;
+    display: inline-block;
+    margin-right: 3.5%
+}
+.checkout-details #billing_state_field {
+    width: 31%;
+    display: inline-block;
+    margin-right: 3.5%
+}
+.checkout-details #billing_postcode_field {
+    width: 31%;
+    display: inline-block;
+}
+.checkout-details .wc_payment_methods.payment_methods.methods label {
+    display: flex;
+    align-items: center;
+}
+.checkout-details .wc-stripe-elements-field {
+    height: 45px !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+.checkout-details #payment {
+    text-align: center;
+}
+.checkout-details .button {
+    background-color: #f4d531 !important;
+    border: 0;
+    color: #000;
+    padding: 8px 50px;
 }
 
 /*=====  Footer  ======*/
