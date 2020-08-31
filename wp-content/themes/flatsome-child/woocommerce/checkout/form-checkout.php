@@ -69,6 +69,9 @@ if ( flatsome_option( 'facebook_login_checkout' ) && get_option( 'woocommerce_en
 
                     <div class="col-inner">
                         <div class="checkout-sidebar sm-touch-scroll">
+                            <div class="order-steps">
+                                <p>1</p>
+                            </div>
                             <h2 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h2>
 
                             <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>

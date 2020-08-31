@@ -486,7 +486,9 @@ body {
 }
 
 .secondary, .checkout-button, .button.checkout, .button.alt {
-    background-color: #cc6666 !important;
+    background-color: #f4d531 !important;
+    font-size: 18px;
+    color: #000;
 }
 
 .woocommerce-cart input[type='submit'], .woocommerce-cart input[type='submit'].button, .woocommerce-cart input[type='submit'], .primary {
@@ -1189,8 +1191,12 @@ body {
 }
 #order_review_heading {
     text-align: center;
-    padding-top: 20px;
     color: #000000;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: bolder;
+    overflow: hidden;
+    padding-top: 10px;
 }
 .woocommerce-checkout form.woocommerce-checkout #payment label {
     display: inline;
@@ -1216,6 +1222,25 @@ body {
 .woocommerce-checkout form.woocommerce-checkout #payment {
     background: #f7f7f7;
     padding: 15px 60px 15px 60px;
+}
+.order-steps {
+    padding-top: 20px;
+}
+.order-steps p {
+    margin: 0px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    border: 2px solid #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    font-weight: bold;
+}
+form.checkout h3 {
+    text-align: center;
+    padding-top: 0px !important;
+    color: #000;
 }
 
 /*=====  Footer  ======*/
