@@ -1242,6 +1242,53 @@ form.checkout h3 {
     padding-top: 0px !important;
     color: #000;
 }
+.page-checkout h2 {
+    color: #333;
+}
+.page-checkout thead th {
+    color: #333;
+}
+.page-checkout .shop_table ul li {
+    padding: 10px 10px 10px 0;
+}
+.page-checkout .shop_table ul li strong {
+    /* font-weight: normal; */
+    color: #333;
+}
+.page-checkout .shop_table th {
+    border-width: 1px;
+}
+.page-checkout .shop_table td:first-child {
+    padding-left: 0 !important;
+}
+.page-checkout .shop_table tfoot th {
+    color: #333;
+}
+.page-checkout .entry-content {
+    box-shadow: none !important;
+}
+.page-checkout .entry-content ul {
+    list-style: none;
+}
+.page-checkout .entry-content ul li {
+    margin-left: 0;
+    color: #333333;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+}
+.page-checkout .entry-content ul li strong {
+    float: right;
+    font-weight: normal;
+    color: #333333;
+}
+.page-checkout .entry-content span.amount {
+    color: #333333;
+    font-weight: normal;
+}
+.page-checkout .entry-content .success-color.woocommerce-notice {
+    color: #333333;
+    text-align: center;
+}
 
 /*=====  Footer  ======*/
 .footer-wrapper .footer-1 {
