@@ -86,22 +86,27 @@ if ( flatsome_option( 'facebook_login_checkout' ) && get_option( 'woocommerce_en
         ?>
                                     <div class="order-detail <?php echo esc_attr(apply_filters('woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key)); ?>">
                                         <div class="order-detail-img">
-                                            <img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/glasses-icon.svg' ?>">
+                                        <?php echo $_product->get_image(); ?>
+                                            <!-- <img src="<?php //echo site_url().'/wp-content/themes/flatsome-child/images/glasses-icon.svg' ?>"> -->
                                         </div>
                                         <div class="order-detail-description product-name">
                                             <h2><?php echo apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
+                                            <?php  
+                                            foreach($cart_item['variation'] as $key => $variation) {
+                                                if($key == 'Lens Name') {
+                                            ?>
                                             <div>
                                                 <div class="bold-text">Prescription Type</div>
-                                                <div class="grey-text">Single Vision</div>
+                                                <div class="grey-text"><?php echo ucwords(str_replace("-"," ",$variation)) ?></div>
                                             </div>
+                                            <?php } 
+                                            if($key == 'Lens Usage') { ?>
                                             <div>
-                                                <div class="bold-text">Lens Type</div>
-                                                <div class="grey-text">Blue Light Filtering</div>
+                                                <div class="bold-text">Lens Usage</div>
+                                                <div class="grey-text"><?php echo ucwords(str_replace("-"," ",$variation)) ?></div>
                                             </div>
-                                            <div>
-                                                <div class="bold-text">Lens Material</div>
-                                                <div class="grey-text">1.56 Index</div>
-                                            </div>
+                                            <?php }
+                                        } ?>
                                         </div>
                                     </div>
                                     <?php }  
