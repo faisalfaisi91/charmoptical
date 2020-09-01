@@ -51,6 +51,7 @@ $lens_types = get_terms('pa_lens-type');
                     <div class="container">
                         <div class="sub-heading">
                             <p>Prescription Type</p>
+                            <span><i class="fa fa-chevron-left"></i></span>
                             <span class="active"><i class="fa fa-circle"></i></span>
                             <span><i class="fa fa-circle"></i></span>
                             <span><i class="fa fa-circle"></i></span>

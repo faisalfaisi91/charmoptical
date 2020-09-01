@@ -790,19 +790,30 @@ body {
     font-weight: 600;
     margin-bottom: 0;
 }
-.page-template-customize .sub-heading .fa,
-.page-template-lens-thinkness .sub-heading .fa,
-.page-template-lens-usage .sub-heading .fa,
-.page-template-lens-prescription .sub-heading .fa {
+.page-template-customize .sub-heading .fa-circle,
+.page-template-lens-thinkness .sub-heading .fa-circle,
+.page-template-lens-usage .sub-heading .fa-circle,
+.page-template-lens-prescription .sub-heading .fa-circle {
     font-size: 5px;
     padding-right: 15px;
 }
-.page-template-customize .sub-heading .active .fa,
-.page-template-lens-thinkness .sub-heading .active .fa,
-.page-template-lens-usage .sub-heading .active .fa,
-.page-template-lens-prescription .sub-heading .active .fa {
+
+.page-template-customize .sub-heading .fa-chevron-left,
+.page-template-lens-thinkness .sub-heading .fa-chevron-left,
+.page-template-lens-usage .sub-heading .fa-chevron-left,
+.page-template-lens-prescription .sub-heading .fa-chevron-left {
+    font-size: 20px;
+    float: left;
+    cursor: pointer;
+}
+
+.page-template-customize .sub-heading .active .fa-circle,
+.page-template-lens-thinkness .sub-heading .active .fa-circle,
+.page-template-lens-usage .sub-heading .active .fa-circle,
+.page-template-lens-prescription .sub-heading .active .fa-circle {
     font-size: 10px;
 }
+
 .product-lenses-block {
     background: #f7f7f7;
     align-items: center;
