@@ -1134,56 +1134,56 @@ body {
     padding-top: 70px;
     border-bottom: 1px dotted #333;
 }
-.checkout-details .woocommerce-billing-fields {
+form.woocommerce-checkout .woocommerce-billing-fields {
     border-top: 0;
 }
-.checkout-details .input-text {
+form.woocommerce-checkout .input-text {
     height: 45px;
     border-radius: 8px;
     box-shadow: none;
 }
-.checkout-details .select2-selection {
+form.woocommerce-checkout .select2-selection {
     height: 45px !important;
     border-radius: 8px !important;
     box-shadow: none !important;
 }
-.checkout-details .country_select {
+form.woocommerce-checkout .country_select {
     height: 45px !important;
     border-radius: 8px !important;
     box-shadow: none !important;
 }
-.checkout-details .state_select {
+form.woocommerce-checkout .state_select {
     height: 45px !important;
     border-radius: 8px !important;
     box-shadow: none !important;
 }
-.checkout-details #billing_city_field {
+form.woocommerce-checkout #billing_city_field {
     width: 31%;
     display: inline-block;
     margin-right: 3.5%
 }
-.checkout-details #billing_state_field {
+form.woocommerce-checkout #billing_state_field {
     width: 31%;
     display: inline-block;
     margin-right: 3.5%
 }
-.checkout-details #billing_postcode_field {
+form.woocommerce-checkout #billing_postcode_field {
     width: 31%;
     display: inline-block;
 }
-.checkout-details .wc_payment_methods.payment_methods.methods label {
+form.woocommerce-checkout .wc_payment_methods.payment_methods.methods label {
     display: flex;
     align-items: center;
 }
-.checkout-details .wc-stripe-elements-field {
+form.woocommerce-checkout .wc-stripe-elements-field {
     height: 45px !important;
     border-radius: 8px !important;
     box-shadow: none !important;
 }
-.checkout-details #payment {
+form.woocommerce-checkout #payment {
     text-align: center;
 }
-.checkout-details .button {
+form.woocommerce-checkout .button {
     background-color: #f4d531 !important;
     border: 0;
     color: #000;
@@ -1198,9 +1198,9 @@ body {
     overflow: hidden;
     padding-top: 10px;
 }
-.woocommerce-checkout form.woocommerce-checkout #payment label {
+/* .woocommerce-checkout form.woocommerce-checkout #payment label {
     display: inline;
-}
+} */
 .woocommerce-checkout form.woocommerce-checkout table.shop_table {
     width: 50%;
     margin: 0px auto;
