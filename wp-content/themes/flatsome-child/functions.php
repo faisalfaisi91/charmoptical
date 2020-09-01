@@ -194,7 +194,9 @@ function custom_wc_get_formatted_cart_item_data($cart_item, $flat = false)
 // Remove the additional information tab
 function woo_remove_product_tabs($tabs)
 {
-    unset($tabs['additional_information']);
+    unset( $tabs['description'] );          // Remove the description tab
+    unset( $tabs['reviews'] );          // Remove the reviews tab
+    unset( $tabs['additional_information'] );   // Remove the additional information tab
     return $tabs;
 }
 
@@ -265,11 +267,14 @@ function my_custom_display_payments() {
     $available_gateways = array();
   }
   ?>
-  <div id="payment">
+<div id="payment">
+    <div class="order-steps">
+        <p>3</p>
+    </div>
     <h3><?php esc_html_e( 'Payment', 'woocommerce' ); ?></h3>
     <?php if ( WC()->cart->needs_payment() ) : ?>
     <ul class="wc_payment_methods payment_methods methods">
-    <?php
+<?php
     if ( ! empty( $available_gateways ) ) {
       foreach ( $available_gateways as $gateway ) {
         wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
@@ -279,8 +284,8 @@ function my_custom_display_payments() {
     }
     ?>
     </ul>
-  <?php endif; ?>
-  </div>
+    <?php endif; ?>
+</div>
 <?php
 }
 
@@ -303,3 +308,12 @@ function my_custom_payment_fragment( $fragments ) {
 
 	return $fragments;
 }
+add_action( 'woocommerce_after_add_to_cart_button', 'add_content_after_addtocart_button_func' );
+
+function add_content_after_addtocart_button_func() {
+global $product;
+$product_details = $product->get_data();
+$product_full_description = $product_details['description'];
+
+// Echo content.
+echo '<div class="second_content">'.$product_full_description.'</div>';}

@@ -48,47 +48,6 @@ $panel_count = 0;
  * Custom Information section
  */
 ?>
-<div class="product-description">
-	<div class="product-feature">
-		<h3>Product features
-			<img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/arrow-up.svg' ?>">
-		</h3>
-		<ul>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-		</ul>
-	</div>
-	<div class="description">
-		<h3>Description
-			<img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/arrow-up.svg' ?>">
-		</h3>
-		<ul>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-		</ul>
-	</div>
-	<div class="lenses">
-		<h3>Our lenses
-			<img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/arrow-up.svg' ?>">
-		</h3>
-			<ul>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-			<li>Globally optimize value-added.</li>
-		</ul>
-	</div>
-</div>
 <div class="information-block">
 	<h1>Information</h1>
 	<div class="d-flex">
@@ -116,6 +75,26 @@ $panel_count = 0;
 				<div><strong><?php echo get_field('frame_material', $product_id); ?></strong></div>
 			</div>
 		</div>
+	</div>
+</div>
+<div class="product-description">
+	<div class="product-feature">
+		<h3>Product features
+			<img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/arrow-up.svg' ?>">
+		</h3>
+		<?php echo get_field('product_features', $product_id); ?>
+	</div>
+	<div class="description">
+		<h3>Description
+			<img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/arrow-up.svg' ?>">
+		</h3>
+		<?php echo get_field('product_description', $product_id); ?>
+	</div>
+	<div class="lenses">
+		<h3>Our lenses
+			<img src="<?php echo site_url().'/wp-content/themes/flatsome-child/images/arrow-up.svg' ?>">
+		</h3>
+			<?php echo get_field('our_lenses', $product_id); ?>
 	</div>
 </div>
 <?php

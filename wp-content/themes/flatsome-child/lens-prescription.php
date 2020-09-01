@@ -45,6 +45,15 @@ $product_slug = $product->get_slug();
                 <span class="divider">/</span>
                 <a href="javascript:;"><?php echo $post->post_title; ?></a>
             </nav>
+            <div class="container">
+                        <div class="sub-heading">
+                            <p>Your Prescription</p>
+                            <span><i class="fa fa-circle"></i></span>
+                            <span class="active"><i class="fa fa-circle"></i></span>
+                            <span><i class="fa fa-circle"></i></span>
+                            <span><i class="fa fa-circle"></i></span>
+                        </div>
+                    </div>
             <div class="prescription-form-block">
                 <div class="details">
                     <h2>Enter Your Prescription </h2>

@@ -40,13 +40,15 @@ $left_sph_cyl = $left_sph + $left_cyl;
         <div id="product-<?php echo $product->get_ID() ?>" <?php fl_woocommerce_version_check('3.4.0') ? wc_product_class($classes, $product) : post_class($classes); ?>>
             <div class="product-container">
                 <div class="product-main">
-                    <nav class="woocommerce-breadcrumb breadcrumbs uppercase">
-                        <a href="<?php echo site_url() ?>">Home</a>
-                        <span class="divider">/</span>
-                        <a href="<?php echo site_url() . '/lens-prescription' ?>">Lens Prescription</a>
-                        <span class="divider">/</span>
-                        <a href="javascript:;"><?php wp_title(''); ?></a>
-                    </nav>
+                    <div class="container">
+                        <div class="sub-heading">
+                            <p>Lens Thinkness</p>
+                            <span><i class="fa fa-circle"></i></span>
+                            <span><i class="fa fa-circle"></i></span>
+                            <span class="active"><i class="fa fa-circle"></i></span>
+                            <span><i class="fa fa-circle"></i></span>
+                        </div>
+                    </div>
                     <div id="myModal" class="modal">
                         <!-- Modal content -->
                         <div class="modal-content">
@@ -64,18 +66,22 @@ $left_sph_cyl = $left_sph + $left_cyl;
                         </div>
                     </div>
                     <div class="row">
+                        <div class="details">
+                            <h2>Choose the Thinkness of your lens </h2>
+                        </div>
+                    </div>
+                    <div class="row product-lenses-block">
                         <div class="col medium-8">
                             <section class="section product-lenses">
                                 <div class="section-content relative">
-                                    <div class="details">
-                                        <h2>Choose the Thinkness of your lens </h2>
-                                    </div>
                                     <div class="row align-middle product-row" id="row-809642893">
                                         <?php
-                                        foreach ($lens_thinkness
-
-                                        as $thinkness) {
+                                        foreach ($lens_thinkness as $thinkness) {
                                         $term = get_term_meta($thinkness->term_id, 'lens_price');
+                                        if (function_exists('get_wp_term_image'))
+                                            {
+                                                $meta_image = get_wp_term_image($thinkness->term_id); 
+                                            }
                                         if ($thinkness->name == 'Basic Thinkness' && ($right_sph_cyl >= 5 || $left_sph_cyl >= 5)) {
                                         ?>
                                         <div class="col medium-6 small-12 large-6 product-card">
@@ -96,6 +102,9 @@ $left_sph_cyl = $left_sph + $left_cyl;
                                                 }
                                                 ?>
                                                 <div class="col-inner box-shadow-3 box-shadow-5-hover product-card-inner <?php echo $basic_thin_disable ?>">
+                                                <div class="image-block">
+                                                        <img src="<?php echo $meta_image; ?>">
+                                                </div>
                                                     <h3><?php echo ucwords($thinkness->name); ?></h3>
                                                     <p><?php echo $thinkness->description ?></p>
                                                     <p>

@@ -113,3 +113,7 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
 <?php do_action('flatsome_after_product_images'); ?>
 
 <?php wc_get_template( 'woocommerce/single-product/product-gallery-thumbnails.php' ); ?>
+<?php if(!empty(get_field('under_price_description', $product->get_ID()))) { ?>
+<h2>Product Description</h2>
+<p><?php echo get_field('under_price_description', $product->get_ID()); ?></p>
+<?php } ?>
