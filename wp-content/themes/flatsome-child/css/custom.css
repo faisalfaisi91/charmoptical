@@ -831,6 +831,18 @@ td {
 .page-template-lens-prescription .sub-heading .active .fa {
   font-size: 10px;
 }
+.page-template-customize .sub-heading .back-icon,
+.page-template-lens-prescription .sub-heading .back-icon,
+.page-template-lens-thinkness .sub-heading .back-icon,
+.page-template-lens-usage .sub-heading .back-icon {
+  float: left;
+}
+.page-template-customize .sub-heading .back-icon .fa,
+.page-template-lens-prescription .sub-heading .back-icon .fa,
+.page-template-lens-thinkness .sub-heading .back-icon .fa,
+.page-template-lens-usage .sub-heading .back-icon .fa {
+  font-size: 25px;
+}
 
 .product-lenses-block {
   background: #f7f7f7;
@@ -1243,9 +1255,6 @@ form.woocommerce-checkout .button {
   overflow: hidden;
   padding-top: 10px;
 }
-.woocommerce-checkout form.woocommerce-checkout #payment label {
-  display: inline;
-}
 .woocommerce-checkout form.woocommerce-checkout table.shop_table {
   width: 50%;
   margin: 0px auto;
@@ -1486,11 +1495,11 @@ form.checkout h3 {
   background-color: #cc6666 !important;
 }
 
-.shop_table ul li,
+/* .shop_table ul li,
 .checkout ul li {
   float: left;
   padding: 10px 10px;
-}
+} */
 
 /* The table containing the list of products and our custom elements */
 .woocommerce-cart .woocommerce-cart-form {

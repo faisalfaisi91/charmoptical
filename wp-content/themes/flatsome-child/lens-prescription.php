@@ -36,7 +36,8 @@ $product_slug = $product->get_slug();
     <div class="container">
         <div class="woocommerce-notices-wrapper"></div>
     </div>
-    <div id="product-<?php echo $product->get_ID() ?>" <?php fl_woocommerce_version_check('3.4.0') ? wc_product_class($classes, $product) : post_class($classes); ?>>
+    <div id="product-<?php echo $product->get_ID() ?>"
+        <?php fl_woocommerce_version_check('3.4.0') ? wc_product_class($classes, $product) : post_class($classes); ?>>
         <div class="Prescription-form">
             <nav class="woocommerce-breadcrumb breadcrumbs uppercase">
                 <a href="<?php echo site_url() ?>">Home</a>
@@ -46,14 +47,19 @@ $product_slug = $product->get_slug();
                 <a href="javascript:;"><?php echo $post->post_title; ?></a>
             </nav>
             <div class="container">
-                        <div class="sub-heading">
-                            <p>Your Prescription</p>
-                            <span><i class="fa fa-circle"></i></span>
-                            <span class="active"><i class="fa fa-circle"></i></span>
-                            <span><i class="fa fa-circle"></i></span>
-                            <span><i class="fa fa-circle"></i></span>
-                        </div>
-                    </div>
+                <div class="sub-heading">
+                    <p>Your Prescription</p>
+                    <span class="back-icon">
+                        <a href="<?php echo site_url() . '/product-customizer/?p=' . $product_slug ?>">
+                            <i class="fa fa-chevron-left"></i>
+                        </a>
+                    </span>
+                    <span><i class="fa fa-circle"></i></span>
+                    <span class="active"><i class="fa fa-circle"></i></span>
+                    <span><i class="fa fa-circle"></i></span>
+                    <span><i class="fa fa-circle"></i></span>
+                </div>
+            </div>
             <div class="prescription-form-block">
                 <div class="details">
                     <h2>Enter Your Prescription </h2>
@@ -1028,8 +1034,8 @@ $product_slug = $product->get_slug();
                                             </div>
                                         </div>
                                     </form>
-                                    <br/>
-                                    <br/>
+                                    <br />
+                                    <br />
                                     <p id="pd-one-num"><a href="javascript:;">I have two PD numbers</a></p>
                                     <p id="pd-two-num" style="display: none;"><a href="javascript:;">I have one PD
                                             number</a>
@@ -1051,74 +1057,83 @@ $product_slug = $product->get_slug();
     </div>
 </div>
 <script>
-    jQuery(document).ready(function () {
-        var right_sph = '<?php echo $_SESSION['right-sph'] ?>';
-        var right_cyl = '<?php echo $_SESSION['right_cyl'] ?>';
-        var right_axis = '<?php echo $_SESSION['right_axis'] ?>';
-        var right_add = '<?php echo $_SESSION['right_add'] ?>';
-        var left_sph = '<?php echo $_SESSION['left_sph'] ?>';
-        var left_cyl = '<?php echo $_SESSION['left_cyl'] ?>';
-        var left_axis = '<?php echo $_SESSION['left_axis'] ?>';
-        var left_add = '<?php echo $_SESSION['left_add'] ?>';
-        var pd_one_select = '<?php echo $_SESSION['pd_one_select'] ?>';
-        jQuery(".right-sph option").each(function () {
-            if (jQuery(this).val() === right_sph) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery(".right-cyl option").each(function () {
-            if (jQuery(this).val() === right_cyl) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery(".right-axis option").each(function () {
-            if (jQuery(this).val() === right_axis) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery(".right-add option").each(function () {
-            if (jQuery(this).val() === right_add) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery(".left-sph option").each(function () {
-            if (jQuery(this).val() === left_sph) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery(".left-cyl option").each(function () {
-            if (jQuery(this).val() === left_cyl) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery(".left-axis option").each(function () {
-            if (jQuery(this).val() === left_axis) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery(".left-add option").each(function () {
-            if (jQuery(this).val() === left_add) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery(".pd-one-select option").each(function () {
-            if (jQuery(this).val() === pd_one_select) {
-                jQuery(this).attr("selected", "selected");
-            }
-        });
-        jQuery('#pd-one-num').click(function () {
-            jQuery('#single-pd').hide();
-            jQuery('#dual-pd').show();
-            jQuery('#pd-two-num').show();
-            jQuery('#pd-one-num').hide();
-        });
-        jQuery('#pd-two-num').click(function () {
-            jQuery('#dual-pd').hide();
-            jQuery('#single-pd').show();
-            jQuery('#pd-two-num').hide();
-            jQuery('#pd-one-num').show();
-        });
-
+jQuery(document).ready(function() {
+    var right_sph = '<?php echo $_SESSION['
+    right - sph '] ?>';
+    var right_cyl = '<?php echo $_SESSION['
+    right_cyl '] ?>';
+    var right_axis = '<?php echo $_SESSION['
+    right_axis '] ?>';
+    var right_add = '<?php echo $_SESSION['
+    right_add '] ?>';
+    var left_sph = '<?php echo $_SESSION['
+    left_sph '] ?>';
+    var left_cyl = '<?php echo $_SESSION['
+    left_cyl '] ?>';
+    var left_axis = '<?php echo $_SESSION['
+    left_axis '] ?>';
+    var left_add = '<?php echo $_SESSION['
+    left_add '] ?>';
+    var pd_one_select = '<?php echo $_SESSION['
+    pd_one_select '] ?>';
+    jQuery(".right-sph option").each(function() {
+        if (jQuery(this).val() === right_sph) {
+            jQuery(this).attr("selected", "selected");
+        }
     });
+    jQuery(".right-cyl option").each(function() {
+        if (jQuery(this).val() === right_cyl) {
+            jQuery(this).attr("selected", "selected");
+        }
+    });
+    jQuery(".right-axis option").each(function() {
+        if (jQuery(this).val() === right_axis) {
+            jQuery(this).attr("selected", "selected");
+        }
+    });
+    jQuery(".right-add option").each(function() {
+        if (jQuery(this).val() === right_add) {
+            jQuery(this).attr("selected", "selected");
+        }
+    });
+    jQuery(".left-sph option").each(function() {
+        if (jQuery(this).val() === left_sph) {
+            jQuery(this).attr("selected", "selected");
+        }
+    });
+    jQuery(".left-cyl option").each(function() {
+        if (jQuery(this).val() === left_cyl) {
+            jQuery(this).attr("selected", "selected");
+        }
+    });
+    jQuery(".left-axis option").each(function() {
+        if (jQuery(this).val() === left_axis) {
+            jQuery(this).attr("selected", "selected");
+        }
+    });
+    jQuery(".left-add option").each(function() {
+        if (jQuery(this).val() === left_add) {
+            jQuery(this).attr("selected", "selected");
+        }
+    });
+    jQuery(".pd-one-select option").each(function() {
+        if (jQuery(this).val() === pd_one_select) {
+            jQuery(this).attr("selected", "selected");
+        }
+    });
+    jQuery('#pd-one-num').click(function() {
+        jQuery('#single-pd').hide();
+        jQuery('#dual-pd').show();
+        jQuery('#pd-two-num').show();
+        jQuery('#pd-one-num').hide();
+    });
+    jQuery('#pd-two-num').click(function() {
+        jQuery('#dual-pd').hide();
+        jQuery('#single-pd').show();
+        jQuery('#pd-two-num').hide();
+        jQuery('#pd-one-num').show();
+    });
+
+});
 </script>
 <?php get_footer(); ?>
