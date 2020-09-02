@@ -49,22 +49,21 @@ $html = '';
 $html .= '<input type="hidden" value="'.$variation_id.'"> <h5>Please review your selections below to make sure everything is correct before
                                     adding to cart!</h5>
                                 <div class="modal-info">
-                                    <h4 class="frame-lens-heading">Frame & Lens Details:</h4>
                                     <div class="row">
-                                        <div class="col medium-8 frame-lens-details">
-                                            <p><strong>Frame:</strong> <span>'. $product->get_title() .'</span> <span class="lens-type-price">$'.$_SESSION['frame_price'].'</span></p>
-                                            <p><strong>Lens Type:</strong> <span>'.str_replace("-"," ",ucwords($lens_type)).'</span><span class="lens-type-price">$'.$lens_type_price[1].'</span></p>
-                                            <p><strong>Lens
-                                            Usage:</strong> <span>'.str_replace("-"," ",ucwords($usage)).'</span><span class="lens-type-price">$'.$usage_price.'</span></p>
-                                            <p><strong>Lens
-                                            Thinkness:</strong> <span>'.str_replace("-"," ", ucwords($thickness_name)).'</span><span class="lens-type-price">$'.$thinkness_total.'</span></p>
+                                        <div class="col medium-6"> 
+                                            <img src="'.$product_image.'"/>                                        
+                                        </div>
+                                        <div class="col medium-6 frame-lens-details">
+                                            <p><label>Frame:</label><span>'. $product->get_title() .'</span> <span class="lens-type-price">$'.$_SESSION['frame_price'].'</span></p>
+                                            <p><label>Lens Type:</label> <span>'.str_replace("-"," ",ucwords($lens_type)).'</span><span class="lens-type-price">$'.$lens_type_price[1].'</span></p>
+                                            <p>
+                                            <label>Lens Usage:</label> <span>'.str_replace("-"," ",ucwords($usage)).'</span><span class="lens-type-price">$'.$usage_price.'</span></p>
+                                            <p>
+                                            <label>Lens Thickness:</label> <span>'.str_replace("-"," ", ucwords($thickness_name)).'</span><span class="lens-type-price">$'.$thinkness_total.'</span></p>
                                             <hr>
-                                            <span class="lens-type-price">Total: '.get_woocommerce_currency_symbol() . $total.'</span>
-                                         </div>
-                                         <div class="col medium-4"> 
-                                         <img src="'.$product_image.'"/>                                        
-                                         </div>
-                                     </div>                               
+                                            <span class="lens-type-price"><strong>Total: '.get_woocommerce_currency_symbol() . $total.'</strong></span>
+                                        </div>
+                                    </div>
                                 <hr>
                                 <div class="lens-prescription-info">
                                 <div class="row">
@@ -100,7 +99,6 @@ $html .= '<input type="hidden" value="'.$variation_id.'"> <h5>Please review your
                                         </table>
                                     </div>
                                 </div>
-                                <hr>
                                 <div class="buttons lens-cart-btn">
                                     <a href="javascript:;" onclick="addItemToCart('.$variation_id.')">
                                         <button class="b2 prescription-btn">Add to Cart</button>

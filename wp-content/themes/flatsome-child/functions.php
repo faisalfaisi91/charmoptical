@@ -267,11 +267,14 @@ function my_custom_display_payments() {
     $available_gateways = array();
   }
   ?>
-  <div id="payment">
+<div id="payment">
+    <div class="order-steps">
+        <p>3</p>
+    </div>
     <h3><?php esc_html_e( 'Payment', 'woocommerce' ); ?></h3>
     <?php if ( WC()->cart->needs_payment() ) : ?>
     <ul class="wc_payment_methods payment_methods methods">
-    <?php
+<?php
     if ( ! empty( $available_gateways ) ) {
       foreach ( $available_gateways as $gateway ) {
         wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
@@ -281,8 +284,8 @@ function my_custom_display_payments() {
     }
     ?>
     </ul>
-  <?php endif; ?>
-  </div>
+    <?php endif; ?>
+</div>
 <?php
 }
 
@@ -313,6 +316,4 @@ $product_details = $product->get_data();
 $product_full_description = $product_details['description'];
 
 // Echo content.
-echo '<div class="second_content">'.$product_full_description.'</div>';
-
-}
+echo '<div class="second_content">'.$product_full_description.'</div>';}
