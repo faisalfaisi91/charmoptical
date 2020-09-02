@@ -815,33 +815,32 @@ td {
 .page-template-lens-thinkness .sub-heading p,
 .page-template-lens-usage .sub-heading p,
 .page-template-lens-prescription .sub-heading p {
-  font-weight: 600;
-  margin-bottom: 0;
+    font-weight: 600;
+    margin-bottom: 0;
 }
-.page-template-customize .sub-heading .fa,
-.page-template-lens-thinkness .sub-heading .fa,
-.page-template-lens-usage .sub-heading .fa,
-.page-template-lens-prescription .sub-heading .fa {
-  font-size: 5px;
-  padding-right: 15px;
+.page-template-customize .sub-heading .fa-circle,
+.page-template-lens-thinkness .sub-heading .fa-circle,
+.page-template-lens-usage .sub-heading .fa-circle,
+.page-template-lens-prescription .sub-heading .fa-circle {
+    font-size: 5px;
+    padding-right: 15px;
 }
-.page-template-customize .sub-heading .active .fa,
-.page-template-lens-thinkness .sub-heading .active .fa,
-.page-template-lens-usage .sub-heading .active .fa,
-.page-template-lens-prescription .sub-heading .active .fa {
-  font-size: 10px;
+
+.page-template-customize .sub-heading .fa-chevron-left,
+.page-template-lens-thinkness .sub-heading .fa-chevron-left,
+.page-template-lens-usage .sub-heading .fa-chevron-left,
+.page-template-lens-prescription .sub-heading .fa-chevron-left {
+    font-size: 20px;
+    float: left;
+    cursor: pointer;
+    clear: both;
 }
-.page-template-customize .sub-heading .back-icon,
-.page-template-lens-prescription .sub-heading .back-icon,
-.page-template-lens-thinkness .sub-heading .back-icon,
-.page-template-lens-usage .sub-heading .back-icon {
-  float: left;
-}
-.page-template-customize .sub-heading .back-icon .fa,
-.page-template-lens-prescription .sub-heading .back-icon .fa,
-.page-template-lens-thinkness .sub-heading .back-icon .fa,
-.page-template-lens-usage .sub-heading .back-icon .fa {
-  font-size: 25px;
+
+.page-template-customize .sub-heading .active .fa-circle,
+.page-template-lens-thinkness .sub-heading .active .fa-circle,
+.page-template-lens-usage .sub-heading .active .fa-circle,
+.page-template-lens-prescription .sub-heading .active .fa-circle {
+    font-size: 10px;
 }
 
 .product-lenses-block {
