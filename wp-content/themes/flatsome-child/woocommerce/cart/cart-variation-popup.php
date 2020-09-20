@@ -41,10 +41,10 @@ foreach ($item_data as $data) {
         $pd_two = $data['display'];
     }
 }
-?>
+$html = '
 <td colspan="6" class="actions clear">
     <div class="variation variation-popup">
-        <div class="dropdown-details nested-prescription__details" id="<?php echo $cart_item_key ?>"
+        <div class="dropdown-details nested-prescription__details" id=""
              style="display: none;">
             <div class="row collapse nested-prescription__table co-prescription-table">
                 <div class="small-4 small-medium-4 medium-12 columns co-param-col">
@@ -60,31 +60,32 @@ foreach ($item_data as $data) {
                                                     <span class="co-prod-param co-param-row-label"
                                                           data-clyauto-prop="label">OD (Right)</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesSphere"><?php echo $right_sph ?></span>
+                          data-clyauto-prop="glassesSphere">'.$right_sph.'</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesCylinder"><?php echo $right_cyl ?></span>
+                          data-clyauto-prop="glassesCylinder">'.$right_cyl.'</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesAxis"><?php echo $right_axis ?></span>
+                          data-clyauto-prop="glassesAxis">'.$right_axis.'</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesAdd"><?php echo $right_axis ?></span>
-                    <span class="co-prod-param co-prod-param-value <?php echo (empty($pd_two)) ? 'is_dualpd' : ''; ?>"
-                          data-clyauto-prop="glassesMonoPD"><?php echo $pd_one ?></span>
+                          data-clyauto-prop="glassesAdd">'.$right_add.'</span>
+                    <span class="co-prod-param co-prod-param-value '.$pd_two.'"
+                          data-clyauto-prop="glassesMonoPD">'.$pd_one.'</span>
                 </div>
                 <div class="small-4 small-medium-4 medium-12 columns co-param-col">
                                                     <span class="co-prod-param co-param-row-label"
                                                           data-clyauto-prop="label">OS (Left)</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesSphere"><?php echo $left_sph ?></span>
+                          data-clyauto-prop="glassesSphere">'.$left_sph.'</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesCylinder"><?php echo $left_cyl ?></span>
+                          data-clyauto-prop="glassesCylinder">'.$left_cyl.'</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesAxis"><?php echo $left_axis ?></span>
+                          data-clyauto-prop="glassesAxis">'.$left_axis.'</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesAdd"><?php echo $left_add ?></span>
+                          data-clyauto-prop="glassesAdd">'.$left_add.'</span>
                     <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesMonoPD"><?php echo (!empty($pd_two)) ? $pd_two : ''; ?></span>
+                          data-clyauto-prop="glassesMonoPD">'.$pd_two.'</span>
                 </div>
             </div>
         </div>
     </div>
-</td>
+</td>';
+return $html;

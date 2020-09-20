@@ -41,8 +41,18 @@ if ( $show_downloads ) {
 ?>
 <section class="woocommerce-order-details">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
+    <h2>Hi <?php echo $order->get_billing_first_name() ?>!</h2>
+    <h2>Thanks for your purchase!</h2>
 
-	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
+	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order Confirmation', 'woocommerce' ); ?></h2>
+    <p><strong>Order No.</strong> #<?php echo $order->get_id() ?></p>
+    <p><strong><?php echo wc_format_datetime( $order->get_date_created() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong></p>
+    <h3>Customer Details:</h3>
+    <?php
+        if ( $show_customer_details ) {
+            wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
+        }
+    ?>
 
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
@@ -99,8 +109,3 @@ if ( $show_downloads ) {
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>
-
-<?php
-if ( $show_customer_details ) {
-	wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
-}

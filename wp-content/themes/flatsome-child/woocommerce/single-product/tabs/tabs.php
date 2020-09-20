@@ -53,7 +53,7 @@ $panel_count = 0;
 	<div class="d-flex">
 		<div>
 			<div class="mb-2 d-inline">
-				<div class="w-120">Modal Code</div>
+				<div class="w-120">Model Code</div>
 				<div><strong><?php echo get_field('model_code', $product_id); ?></strong></div>
 			</div>
 			<div class="mb-2 d-inline">

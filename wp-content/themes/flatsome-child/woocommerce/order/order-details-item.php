@@ -45,7 +45,7 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 
 		do_action( 'woocommerce_order_item_meta_start', $item_id, $item, $order, false );
 
-		wc_display_item_meta( $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+//		wc_display_item_meta( $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		do_action( 'woocommerce_order_item_meta_end', $item_id, $item, $order, false );
 		?>
@@ -56,6 +56,12 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 	</td>
 
 </tr>
+<tr>
+    <td>
+        <?php echo orderPrescriptionTable($item->get_formatted_meta_data()); ?>
+    </td>
+</tr>
+<?php //wc_get_template('order/order-prescription-table.php', array('item_data' => $item->get_formatted_meta_data())); ?>
 
 <?php if ( $show_purchase_note && $purchase_note ) : ?>
 

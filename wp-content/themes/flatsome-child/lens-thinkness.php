@@ -43,7 +43,7 @@ $left_sph_cyl = $left_sph + $left_cyl;
             <div class="product-main">
                 <div class="container">
                     <div class="sub-heading">
-                        <p>Lens Thinkness</p>
+                        <p>Lens Thickness</p>
                         <span class="back-icon">
                             <a href="<?php echo site_url() ?>/lens-prescription">
                                 <i class="fa fa-chevron-left"></i>
@@ -73,7 +73,8 @@ $left_sph_cyl = $left_sph + $left_cyl;
                 </div>
                 <div class="row">
                     <div class="details">
-                        <h2>Choose the Thinkness of your lens </h2>
+                        <h2>Choose the Thickness of your lens </h2>
+                        <h5>Don’t worry! If you have a high prescription, we will automatically, recommend you</h5>
                     </div>
                 </div>
                 <div class="row product-lenses-block">
