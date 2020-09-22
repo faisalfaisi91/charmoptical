@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb7adb34-aa8b-4a4b-a0d3-d43183bb4110" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/charmoptical.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/fatal-errors-2020-09-19-56a8637fa28f3e6d65374b83c969a2f7.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/flatsome-child/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/flatsome-child/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/flatsome-child/lens-thinkness.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/flatsome-child/lens-thinkness.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/cart/cart-variation-popup.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/cart/cart-variation-popup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/checkout/review-order.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/checkout/review-order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/order/order-details.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/order/order-details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/single-product/tabs/tabs.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/flatsome-child/woocommerce/single-product/tabs/tabs.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hgZfOq6QzLg4mPuKppLwHnaWu3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb7adb34-aa8b-4a4b-a0d3-d43183bb4110" name="Default Changelist" comment="" />
+      <created>1600434797280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600434797280</updated>
+      <workItem from="1600434798521" duration="3423000" />
+      <workItem from="1600500479295" duration="6041000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="659" y="433" key="NewPhpFileDialog" timestamp="1600511041997">
+      <screen x="0" y="23" width="1680" height="960" />
+    </state>
+    <state x="659" y="433" key="NewPhpFileDialog/0.23.1680.960@0.23.1680.960" timestamp="1600511041997" />
+    <state x="341" y="141" key="SettingsEditor" timestamp="1600434839868">
+      <screen x="0" y="23" width="1680" height="960" />
+    </state>
+    <state x="341" y="141" key="SettingsEditor/0.23.1680.960@0.23.1680.960" timestamp="1600434839868" />
+    <state x="541" y="135" width="904" height="735" key="find.popup" timestamp="1600515329858">
+      <screen x="0" y="23" width="1680" height="960" />
+    </state>
+    <state x="541" y="135" width="904" height="735" key="find.popup/0.23.1680.960@0.23.1680.960" timestamp="1600515329858" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1600510197483">
+      <screen x="0" y="23" width="1680" height="960" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.960@0.23.1680.960" timestamp="1600510197483" />
+  </component>
+</project>

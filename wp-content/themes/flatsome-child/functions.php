@@ -316,4 +316,125 @@ $product_details = $product->get_data();
 $product_full_description = $product_details['description'];
 
 // Echo content.
-echo '<div class="second_content">'.$product_full_description.'</div>';}
+echo '<div class="second_content">'.$product_full_description.'</div>';
+}
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+add_filter( 'woocommerce_checkout_fields' , 'override_billing_checkout_fields', 20, 1 );
+function override_billing_checkout_fields( $fields ) {
+    $fields['billing']['billing_country']['label'] = '';
+    $fields['billing']['billing_address_1']['label'] = '';
+    $fields['billing']['billing_state']['label'] = '';
+    $fields['billing']['billing_email']['label'] = '';
+    $fields['billing']['billing_email']['placeholder'] = 'Email Address';
+    $fields['billing']['billing_first_name']['label'] = '';
+    $fields['billing']['billing_first_name']['placeholder'] = 'First Name';
+    $fields['billing']['billing_last_name']['label'] = '';
+    $fields['billing']['billing_last_name']['placeholder'] = 'Last Name';
+    $fields['billing']['billing_city']['label'] = '';
+    $fields['billing']['billing_city']['placeholder'] = 'Town/City';
+    $fields['billing']['billing_postcode']['label'] = '';
+    $fields['billing']['billing_postcode']['placeholder'] = 'Postcode/ZIP';
+    $fields['billing']['billing_phone']['label'] = '';
+    $fields['billing']['billing_phone']['placeholder'] = 'Phone';
+
+
+    // Shipping fields
+    $fields['shipping']['shipping_country']['label'] = '';
+    $fields['shipping']['shipping_address_1']['label'] = '';
+    $fields['shipping']['shipping_state']['label'] = '';
+    $fields['shipping']['shipping_email']['label'] = '';
+    $fields['shipping']['shipping_email']['placeholder'] = 'Email Address';
+    $fields['shipping']['shipping_first_name']['label'] = '';
+    $fields['shipping']['shipping_first_name']['placeholder'] = 'First Name';
+    $fields['shipping']['shipping_last_name']['label'] = '';
+    $fields['shipping']['shipping_last_name']['placeholder'] = 'Last Name';
+    $fields['shipping']['shipping_city']['label'] = '';
+    $fields['shipping']['shipping_city']['placeholder'] = 'Town/City';
+    $fields['shipping']['shipping_postcode']['label'] = '';
+    $fields['shipping']['shipping_postcode']['placeholder'] = 'Postcode/ZIP';
+    $fields['shipping']['shipping_phone']['label'] = '';
+    $fields['shipping']['shipping_phone']['placeholder'] = 'Phone';
+    return $fields;
+}
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'remove_shipping_label', 10, 2 );
+
+function remove_shipping_label( $label, $method ) {
+    $new_label = preg_replace( '/^.+:/', '', $label );
+
+    return $new_label;
+}
+
+function orderPrescriptionTable($item_data) {
+    $right_sph = '';
+    $right_cyl = '';
+    $right_axis = '';
+    $right_add = '';
+    $left_sph = '';
+    $left_cyl = '';
+    $left_axis = '';
+    $left_add = '';
+    $pd_one = '';
+    $pd_two = '';
+    foreach($item_data as $data) {
+        if ($data->key == 'Right SPH') {
+            $right_sph = $data->value;
+        }
+        if ($data->key == 'Right CYL') {
+            $right_cyl = $data->value;
+        }
+        if ($data->key == 'Right AXIS') {
+            $right_axis = $data->value;
+        }
+        if ($data->key == 'Right ADD') {
+            $right_add = $data->value;
+        }
+        if ($data->key == 'Left SPH') {
+            $left_sph = $data->value;
+        }
+        if ($data->key == 'Left CYL') {
+            $left_cyl = $data->value;
+        }
+        if ($data->key == 'Left AXIS') {
+            $left_axis = $data->value;
+        }
+        if ($data->key == 'Left ADD') {
+            $left_add = $data->value;
+        }
+        if ($data->key == 'PD One') {
+            $pd_one = $data->value;
+        }
+        if ($data->key == 'PD Two') {
+            $pd_two = $data->value;
+        }
+    }
+    ?>
+    <table>
+        <tbody>
+        <tr>
+            <th></th>
+            <th>SPH</th>
+            <th>CYL</th>
+            <th>AXIS</th>
+            <th>ADD</th>
+            <th>PD</th>
+        </tr>
+        <tr>
+            <td>OD Right</td>
+            <td><?php echo $right_sph ?></td>
+            <td><?php echo $right_cyl ?></td>
+            <td><?php echo $right_axis ?></td>
+            <td><?php echo $right_add ?></td>
+            <td><?php echo $pd_one ?></td>
+        </tr>
+        <tr>
+            <td>OS Left</td>
+            <td><?php echo $left_sph ?></td>
+            <td><?php echo $left_cyl ?></td>
+            <td><?php echo $left_axis ?></td>
+            <td><?php echo $left_add ?></td>
+            <td><?php echo $pd_two ?></td>
+        </tr>
+        </tbody>
+    </table>
+<?php
+}

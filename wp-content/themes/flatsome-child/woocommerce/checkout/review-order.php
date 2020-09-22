@@ -107,13 +107,13 @@ defined('ABSPATH') || exit;
         </tr>
 
         <?php //do_action('woocommerce_review_order_after_order_total'); ?>
-        <tr class="order-localpickup">
-            <td colspan="2">
-                <div class="localpickup">
-                    <a href="javascript:;">Local Pickup</a>
-                </div>
-            </td>
-        </tr>
+<!--        <tr class="order-localpickup">-->
+<!--            <td colspan="2">-->
+<!--                <div class="localpickup">-->
+<!--                    <a href="javascript:;">Local Pickup</a>-->
+<!--                </div>-->
+<!--            </td>-->
+<!--        </tr>-->
     </tfoot>
 </table>
 <script>

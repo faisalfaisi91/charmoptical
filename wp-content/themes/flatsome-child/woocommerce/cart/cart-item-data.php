@@ -27,12 +27,12 @@ if (!defined('ABSPATH')) {
             </p>
         <?php } ?>
     <?php endforeach; ?>
-    <?php if (is_cart()) { ?>
+    <?php /*if (is_cart()) { ?>
         <div class="row-prescription">
             <div class="dropdown-trigger no-padding-top nested-prescription__trigger-panel"
                  data-clyauto-prop="trigger-dropdown">
                 <span class="nested-prescription__title" onclick="showHidePopup('<?php echo $cart_item_key['key'] ?>')">View prescription</span>
             </div>
         </div>
-    <?php } ?>
+    <?php }*/ ?>
 </div>

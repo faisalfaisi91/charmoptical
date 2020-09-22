@@ -44,47 +44,37 @@ foreach ($item_data as $data) {
 ?>
 <td colspan="6" class="actions clear">
     <div class="variation variation-popup">
-        <div class="dropdown-details nested-prescription__details" id="<?php echo $cart_item_key ?>"
-             style="display: none;">
-            <div class="row collapse nested-prescription__table co-prescription-table">
-                <div class="small-4 small-medium-4 medium-12 columns co-param-col">
-                    <span class="co-prod-param co-param-row-label co-param-col-label empty-col">&nbsp;</span>
-                    <!--<DynamicAttributeDisplay>-->
-                    <span class="co-prod-param co-param-label co-param-col-label">SPH</span>
-                    <span class="co-prod-param co-param-label co-param-col-label">CYL</span>
-                    <span class="co-prod-param co-param-label co-param-col-label">AXIS</span>
-                    <span class="co-prod-param co-param-label co-param-col-label">ADD</span>
-                    <span class="co-prod-param co-param-label co-param-col-label">PD</span>
-                </div>
-                <div class="small-4 small-medium-4 medium-12 columns co-param-col">
-                                                    <span class="co-prod-param co-param-row-label"
-                                                          data-clyauto-prop="label">OD (Right)</span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesSphere"><?php echo $right_sph ?></span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesCylinder"><?php echo $right_cyl ?></span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesAxis"><?php echo $right_axis ?></span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesAdd"><?php echo $right_axis ?></span>
-                    <span class="co-prod-param co-prod-param-value <?php echo (empty($pd_two)) ? 'is_dualpd' : ''; ?>"
-                          data-clyauto-prop="glassesMonoPD"><?php echo $pd_one ?></span>
-                </div>
-                <div class="small-4 small-medium-4 medium-12 columns co-param-col">
-                                                    <span class="co-prod-param co-param-row-label"
-                                                          data-clyauto-prop="label">OS (Left)</span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesSphere"><?php echo $left_sph ?></span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesCylinder"><?php echo $left_cyl ?></span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesAxis"><?php echo $left_axis ?></span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesAdd"><?php echo $left_add ?></span>
-                    <span class="co-prod-param co-prod-param-value"
-                          data-clyauto-prop="glassesMonoPD"><?php echo (!empty($pd_two)) ? $pd_two : ''; ?></span>
-                </div>
-            </div>
+        <div class="dropdown-details nested-prescription__details" id="<?php echo $cart_item_key ?>">
+        </div>
+        <div style="overflow-x:auto;">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>SPH</th>
+                    <th>CYL</th>
+                    <th>AXIS</th>
+                    <th>ADD</th>
+                    <th>PD</th>
+                </tr>
+                <tr>
+                    <td>OD Right</td>
+                    <td><?php echo $right_sph ?></td>
+                    <td><?php echo $right_cyl ?></td>
+                    <td><?php echo $right_axis ?></td>
+                    <td><?php echo $right_add ?></td>
+                    <td><?php echo $pd_one ?></td>
+                </tr>
+                <tr>
+                    <td>OS Left</td>
+                    <td><?php echo $left_sph ?></td>
+                    <td><?php echo $left_cyl ?></td>
+                    <td><?php echo $left_axis ?></td>
+                    <td><?php echo $left_add ?></td>
+                    <td><?php echo $pd_two ?></td>
+                </tr>
+            </table>
+        </div>
+    </div>
         </div>
     </div>
 </td>

@@ -1,0 +1,124 @@
+2020-09-19T10:11:24+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on null in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php:73
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php(47): custom_formatted_cart_item_data(Array)
+#1 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#2 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#4 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php on line 73
+
+2020-09-19T10:12:45+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on null in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php:73
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php(47): custom_formatted_cart_item_data(Array)
+#1 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#2 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#4 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php on line 73
+
+2020-09-19T10:14:03+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php:58
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#2 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#4 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocommerce_order_details_table(943)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6  in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php on line 58
+
+2020-09-19T10:14:53+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php:58
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#2 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#4 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocommerce_order_details_table(943)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6  in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php on line 58
+
+2020-09-19T10:21:43+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php:72
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#2 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#4 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocommerce_order_details_table(943)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6  in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php on line 72
+
+2020-09-19T10:22:21+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php:72
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#2 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#4 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocommerce_order_details_table(943)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6  in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php on line 72
+
+2020-09-19T10:22:27+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php:72
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#2 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#4 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocommerce_order_details_table(943)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6  in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php on line 72
+
+2020-09-19T10:26:39+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-prescription-table.php:13
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php(59): wc_get_template('order/order-pre...', Array)
+#2 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#3 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#4 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#5 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/inclu in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-prescription-table.php on line 13
+
+2020-09-19T10:52:01+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php:379
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php(61): orderPrescriptionTable(Array)
+#1 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#2 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#4 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocomm in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php on line 379
+
+2020-09-19T10:52:44+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php:379
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php(62): orderPrescriptionTable(Array)
+#1 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#2 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#4 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocomm in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php on line 379
+
+2020-09-19T10:53:08+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php:380
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php(61): orderPrescriptionTable(Array)
+#1 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#2 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#4 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocomm in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php on line 380
+
+2020-09-19T10:53:36+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php:379
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php(61): orderPrescriptionTable(Array)
+#1 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#2 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#4 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocomm in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php on line 379
+
+2020-09-19T10:53:47+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php:380
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details-item.php(61): orderPrescriptionTable(Array)
+#1 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#2 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php(71): wc_get_template('order/order-det...', Array)
+#3 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/Library/WebSer...')
+#4 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#5 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocomm in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/functions.php on line 380
+
+2020-09-19T11:10:00+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php on line 44
+
