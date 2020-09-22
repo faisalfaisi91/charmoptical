@@ -1,7 +1,15 @@
 <?php
 $total = '';
+global $post;
+$post_slug = $post->post_name;
+$class = '';
+if($post_slug !== 'lens-prescription') {
+    $class = 'col medium-4';
+} else {
+    $class = '';
+}
 ?>
-<div class="">
+<div class="<?php echo $class; ?>">
     <div class="custom-sidebar">
         <div class="product-details">
             <h4 class="selected-title">You have Selected</h4>
