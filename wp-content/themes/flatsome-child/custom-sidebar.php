@@ -1,8 +1,8 @@
 <?php
 $total = '';
 ?>
-<div class="col medium-4">
-    <div class="col medium-12 small-12 large-12 custom-sidebar">
+<div class="">
+    <div class="custom-sidebar">
         <div class="product-details">
             <h4 class="selected-title">You have Selected</h4>
             <hr>

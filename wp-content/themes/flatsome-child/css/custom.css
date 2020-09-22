@@ -933,6 +933,33 @@ td {
   align-items: center;
   max-width: 1170px;
 }
+.page-template-lens-prescription .prescription-form-block .row.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr;
+}
+.page-template-lens-prescription .prescription-form-block .form-wrapper .left-block {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr;
+}
+.page-template-lens-prescription .prescription-form-block .form-wrapper .left-block .od-right {
+  display: flex;
+  align-items: center;
+}
+.page-template-lens-prescription .prescription-form-block .form-wrapper .left-block .label-1,
+.page-template-lens-prescription .prescription-form-block .form-wrapper .left-block .label-2 {
+  width: 100px;
+}
+.page-template-lens-prescription .prescription-form-block .form-wrapper .left-block .l-four,
+.page-template-lens-prescription .prescription-form-block .form-wrapper .left-block .Label-row-2.l-four {
+  padding-left: 45px;
+  margin-left: 0 !important;
+}
+.page-template-lens-prescription .prescription-form-block .form-wrapper .left-block .os-left {
+  display: flex;
+}
+.page-template-lens-prescription .prescription-form-block .form-wrapper .left-block .box .l-four {
+  padding-left: 0;
+}
 .page-template-lens-prescription .form-container {
   height: 100%;
 }
@@ -1594,7 +1621,7 @@ form.checkout h3 {
 
 @media only screen and (max-width: 1470px) {
   .page-template-lens-prescription .prescription-form-block {
-    max-width: 92%;
+    max-width: 100%;
   }
 }
 
