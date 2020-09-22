@@ -4,6 +4,15 @@ body {
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
 }
+.woocommerce-checkout #wrapper #main {
+  background-color: #f7f7f7;
+}
+.checkout-page-title {
+  display: none;
+}
+.woocommerce-cart td.product-total, .woocommerce-cart .shop_table tfoot tr td, .woocommerce-cart .cart_totals tbody tr td, .woocommerce-cart .shop_table thead tr th:last-of-type, .woocommerce-cart .shop_table tr td:last-of-type {
+  text-align: left;
+}
 
 .section.product-lenses {
   width: 100%;
@@ -1322,15 +1331,15 @@ form.woocommerce-checkout .button {
   display: inline-block;
 }
 .checkout-sidebar {
-  background: #f7f7f7;
+  background: #fff;
 }
 .woocommerce-checkout .woocommerce-billing-fields,
 .woocommerce-checkout .shipping_address {
-  background: #f7f7f7;
+  background: #fff;
   padding: 15px 60px 15px 60px;
 }
 .woocommerce-checkout form.woocommerce-checkout #payment {
-  background: #f7f7f7;
+  background: #fff;
   padding: 15px 60px 15px 60px;
 }
 .order-steps {
@@ -1553,6 +1562,9 @@ form.checkout h3 {
 } */
 
 /* The table containing the list of products and our custom elements */
+.woocommerce-cart .cart_item .variation p strong {
+  display: block;
+}
 .woocommerce-cart .woocommerce-cart-form {
   flex: 1 0 70%; /* 100% at small screens; 70% on larger screens */
   margin-right: 30px;

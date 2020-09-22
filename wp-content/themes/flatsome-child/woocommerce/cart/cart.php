@@ -120,6 +120,9 @@ do_action('woocommerce_before_cart'); ?>
                             
 
                                 <td class="product-name" data-title="<?php esc_attr_e('Product', 'woocommerce'); ?>">
+                                    <p>
+                                        <strong>Frame:</strong>
+                                    </p>
                                     <?php
                                     if (!$product_permalink) {
                                         echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;');

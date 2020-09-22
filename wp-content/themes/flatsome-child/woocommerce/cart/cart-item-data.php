@@ -20,10 +20,10 @@ if (!defined('ABSPATH')) {
 ?>
 <div class="variation">
     <?php foreach ($item_data as $data) : ?>
-        <?php if (($data['key'] != 'Right SPH') && ($data['key'] != 'Right CYL') && ($data['key'] != 'Right AXIS') && ($data['key'] != 'Right ADD') && ($data['key'] != 'Left SPH') && ($data['key'] != 'Left CYL') && ($data['key'] != 'Left AXIS') && ($data['key'] != 'Left ADD') && ($data['key'] != 'PD One') && ($data['key'] != 'PD Two') && ($data['key'] != 'Lens Name')) { ?>
+        <?php if (($data['key'] != 'Right SPH') && ($data['key'] != 'Right CYL') && ($data['key'] != 'Right AXIS') && ($data['key'] != 'Right ADD') && ($data['key'] != 'Left SPH') && ($data['key'] != 'Left CYL') && ($data['key'] != 'Left AXIS') && ($data['key'] != 'Left ADD') && ($data['key'] != 'PD One') && ($data['key'] != 'PD Two')) { ?>
             <p class="variation-<?php echo sanitize_html_class($data['key']); ?>">
-                <!--                    <strong>--><?php //echo wp_kses_post($data['key']); ?><!--:</strong>-->
-                <span><?php echo wp_kses_post(wpautop($data['display'])); ?>
+                <strong><?php echo ucwords(str_replace("-","",wp_kses_post($data['key']))); ?>:</strong>
+                <span><?php echo ucwords(str_replace("-"," ",$data['display'])); ?>
             </p>
         <?php } ?>
     <?php endforeach; ?>
