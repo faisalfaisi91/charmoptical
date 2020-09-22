@@ -53,50 +53,107 @@ if ( $show_downloads ) {
             wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
         }
     ?>
-
+    <h3>Order Summary</h3>
+    <div class="checkout-details-block">
+        <?php
+        do_action( 'woocommerce_order_details_before_order_table_items', $order );
+        $lens_name = '';
+        $lens_usage = '';
+        foreach ($order_items as $item_id => $item) {
+            $product = $item->get_product();
+            if ($product && $product->exists() && $item['quantity'] > 0 && apply_filters('woocommerce_checkout_cart_item_visible', true, $item, $item_id)) {
+                foreach ($item->get_formatted_meta_data() as $key => $variation) {
+                    if ($variation->key == 'Lens Name') {
+                        $lens_name = $variation->display_value;
+                    }
+                    if ($variation->key == 'Lens Usage') {
+                        $lens_usage = $variation->display_value;
+                    }
+                }
+                ?>
+                <div
+                class="order-detail <?php echo esc_attr(apply_filters('woocommerce_cart_item_class', 'cart_item', $item, $item_id)); ?>">
+                <div class="order-detail-img">
+                    <?php echo $product->get_image(); ?><?php echo apply_filters('woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf('&times;&nbsp;%s', $item['quantity']) . '</strong>', $item, $item_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                    ?>
+                    <!-- <img src="<?php //echo site_url().'/wp-content/themes/flatsome-child/images/glasses-icon.svg'
+                    ?>"> -->
+                </div>
+                <div class="order-detail-description product-name">
+                <h2><?php echo apply_filters('woocommerce_cart_item_name', $product->get_name(), $item, $item_id) . '&nbsp;'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                    ?>
+                </h2>
+                <?php
+                if ($lens_name) {
+                    ?>
+                    <div>
+                        <div class="bold-text">Prescription Type</div>
+                        <div class="grey-text">
+                            <?php echo ucwords(str_replace("-", " ", $lens_name)) ?></div>
+                    </div>
+                <?php }
+                if ($lens_usage) { ?>
+                    <div>
+                        <div class="bold-text">Lens Usage</div>
+                        <div class="grey-text">
+                            <?php echo ucwords(str_replace("-", " ", $lens_usage)) ?></div>
+                    </div>
+                <?php }
+                ?>
+                <?php echo orderPrescriptionTable($item->get_formatted_meta_data()); ?>
+            <?php } ?>
+            </div>
+            </div>
+        <?php } ?>
+    </div>
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
-		<thead>
-			<tr>
-				<th class="woocommerce-table__product-name product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="woocommerce-table__product-table product-total"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<?php
-			do_action( 'woocommerce_order_details_before_order_table_items', $order );
-
-			foreach ( $order_items as $item_id => $item ) {
-				$product = $item->get_product();
-
-				wc_get_template(
-					'order/order-details-item.php',
-					array(
-						'order'              => $order,
-						'item_id'            => $item_id,
-						'item'               => $item,
-						'show_purchase_note' => $show_purchase_note,
-						'purchase_note'      => $product ? $product->get_purchase_note() : '',
-						'product'            => $product,
-					)
-				);
-			}
-
-			do_action( 'woocommerce_order_details_after_order_table_items', $order );
-			?>
-		</tbody>
+<!--		<thead>-->
+<!--			<tr>-->
+<!--				<th class="woocommerce-table__product-name product-name">--><?php //esc_html_e( 'Product', 'woocommerce' ); ?><!--</th>-->
+<!--				<th class="woocommerce-table__product-table product-total">--><?php //esc_html_e( 'Total', 'woocommerce' ); ?><!--</th>-->
+<!--			</tr>-->
+<!--		</thead>-->
+<!---->
+<!--		<tbody>-->
+<!--			--><?php
+//			do_action( 'woocommerce_order_details_before_order_table_items', $order );
+//
+//			foreach ( $order_items as $item_id => $item ) {
+//				$product = $item->get_product();
+//
+//				wc_get_template(
+//					'order/order-details-item.php',
+//					array(
+//						'order'              => $order,
+//						'item_id'            => $item_id,
+//						'item'               => $item,
+//						'show_purchase_note' => $show_purchase_note,
+//						'purchase_note'      => $product ? $product->get_purchase_note() : '',
+//						'product'            => $product,
+//					)
+//				);
+//			}
+//
+//			do_action( 'woocommerce_order_details_after_order_table_items', $order );
+//			?>
+<!--		</tbody>-->
 
 		<tfoot>
 			<?php
 			foreach ( $order->get_order_item_totals() as $key => $total ) {
-				?>
+			    if(esc_html( $total['label'] ) == 'Total:') { ?>
+                    <tr>
+                        <td colspan="2"><?php echo esc_html( $total['label'] ); ?> <?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
+                    </tr>
+                <?php } else { ?>
 					<tr>
 						<th scope="row"><?php echo esc_html( $total['label'] ); ?></th>
 						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
 					</tr>
 					<?php
-			}
+			    }
+            }
 			?>
 			<?php if ( $order->get_customer_note() ) : ?>
 				<tr>
@@ -106,6 +163,12 @@ if ( $show_downloads ) {
 			<?php endif; ?>
 		</tfoot>
 	</table>
-
+    <div class="order-all-status">
+        <p>We're getting your order ready to be shipped.</p>
+        <p>We will notify you when it has been sent.</p>
+    </div>
+    <div class="order-status-btn">
+        <a href="<?php echo site_url() ?>/my-account/view-order/<?php echo $order->get_id()?>">View Order Status</a>
+    </div>
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>

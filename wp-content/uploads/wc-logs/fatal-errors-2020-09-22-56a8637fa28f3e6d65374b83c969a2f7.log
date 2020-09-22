@@ -1,0 +1,10 @@
+2020-09-22T15:59:08+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Order_Item_Product::get_variation_attributes() in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php:70
+Stack trace:
+#0 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include()
+#1 /Library/WebServer/Documents/charmoptical/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2556): wc_get_template('order/order-det...', Array)
+#2 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(287): woocommerce_order_details_table(946)
+#3 /Library/WebServer/Documents/charmoptical/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /Library/WebServer/Documents/charmoptical/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/checkout/thankyou.php(47): do_action('woocommerce_tha...', 946)
+#6 /Library/WebServer/Document in /Library/WebServer/Documents/charmoptical/wp-content/themes/flatsome-child/woocommerce/order/order-details.php on line 70
+
