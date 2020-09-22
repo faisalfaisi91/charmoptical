@@ -71,9 +71,10 @@ $product_slug = $product->get_slug();
                             <!--=================================================COLOUMN TWO==========================================================-->
                             <form class="col-2">
                                 <!--=================================================FORM ROW ONE==========================================================-->
-                                <div class="row-one">
+                                <div class="od-right-row">
+                                    <div class="row-one">
                                     <div class="od-right">
-                                        <label class="label-1">OD <br> (Right)</label>
+                                        <label class="label-1">OD (Right)</label>
                                         <div class="Label-row">
                                             <label>SPH</label>
                                             <select id="dropdown-one" class="d-one right-sph">
@@ -429,10 +430,12 @@ $product_slug = $product->get_slug();
                                         </div>
                                     </div>
                                 </div>
+                                </div>
                                 <!--=================================================FORM ROW TWO==========================================================-->
-                                <div class="row-two">
+                                <div class="od-left-row">
+                                    <div class="row-two">
                                     <div class="os-left">
-                                        <label class="label-2">OS <br> (Left)</label>
+                                        <label class="label-2">OS (Left)</label>
                                         <div class="Label-row-2">
                                             <select id="dropdown-one" class="d-one left-sph">
                                                 <option value="+8.00">+8.00</option>
@@ -783,6 +786,7 @@ $product_slug = $product->get_slug();
                                             </select>
                                         </div>
                                     </div>
+                                </div>
                                 </div>
                             </form>
                             <!--=================================================COLOUMN THREE==========================================================-->
