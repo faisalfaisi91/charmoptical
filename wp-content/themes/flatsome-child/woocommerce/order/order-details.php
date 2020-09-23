@@ -59,10 +59,18 @@ if ( $show_downloads ) {
         do_action( 'woocommerce_order_details_before_order_table_items', $order );
         $lens_name = '';
         $lens_usage = '';
+        $color = '';
+        $lens_thickness = '';
         foreach ($order_items as $item_id => $item) {
             $product = $item->get_product();
             if ($product && $product->exists() && $item['quantity'] > 0 && apply_filters('woocommerce_checkout_cart_item_visible', true, $item, $item_id)) {
                 foreach ($item->get_formatted_meta_data() as $key => $variation) {
+                    if ($variation->key == 'Color') {
+                        $color = $variation->display_value;
+                    }
+                    if ($variation->key == 'Lens Thickness') {
+                        $lens_thickness = $variation->display_value;
+                    }
                     if ($variation->key == 'Lens Name') {
                         $lens_name = $variation->display_value;
                     }
@@ -84,6 +92,14 @@ if ( $show_downloads ) {
                     ?>
                 </h2>
                 <?php
+                if($color) { ?>
+                    <div>
+                        <div class="bold-text">Color</div>
+                        <div class="grey-text">
+                            <?php echo ucwords(str_replace("-", " ", $color)) ?></div>
+                    </div>
+                <?php } ?>
+                <?php
                 if ($lens_name) {
                     ?>
                     <div>
@@ -91,8 +107,16 @@ if ( $show_downloads ) {
                         <div class="grey-text">
                             <?php echo ucwords(str_replace("-", " ", $lens_name)) ?></div>
                     </div>
-                <?php }
-                if ($lens_usage) { ?>
+                <?php } ?>
+                <?php
+                if($lens_thickness) { ?>
+                    <div>
+                        <div class="bold-text">Lens Thickness</div>
+                        <div class="grey-text">
+                            <?php echo ucwords(str_replace("-", " ", $lens_thickness)) ?></div>
+                    </div>
+                <?php } ?>
+                <?php if ($lens_usage) { ?>
                     <div>
                         <div class="bold-text">Lens Usage</div>
                         <div class="grey-text">

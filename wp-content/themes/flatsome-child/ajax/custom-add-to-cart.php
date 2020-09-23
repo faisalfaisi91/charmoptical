@@ -5,6 +5,7 @@ $quantity = 1;
 $product = $_SESSION['custom-product-id'];
 $variation = $_POST['variation_id'];
 $data = array(
+    'Color' => $_SESSION['color'],
     'Lens Thickness' => $_SESSION['custom-lens-thickness-name'],
     'Lens Name' => $_SESSION['custom-lens-name'],
     'Lens Usage' => $_SESSION['custom-lens-usage-name'],
@@ -21,6 +22,7 @@ $data = array(
 
 );
 $woocommerce->cart->add_to_cart($product, $quantity, $variation, $data);
+unset($_SESSION['color']);
 unset($_SESSION['custom-lens-id']);
 unset($_SESSION['custom-lens-name']);
 unset($_SESSION['custom-product-id']);

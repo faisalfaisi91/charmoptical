@@ -2,6 +2,18 @@ var getUrl = window.location;
 var baseUrl =
   getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split("/")[1];
 jQuery(document).ready(function () {
+  jQuery('.color-variable-wrapper li').each(function(i) {
+    if(jQuery(this).hasClass('.selected')) {
+      jQuery('.customize-cart-btn').attr('disabled', false);
+    } else {
+      jQuery('.customize-cart-btn').attr('disabled', true);
+    }
+  });
+  // Get selected color on click event on product page
+  jQuery('.color-variable-wrapper li').on('click',function() {
+    jQuery('.customize-cart-btn').attr('disabled', false);
+  });
+
   var frame_value = jQuery(".wc-pao-addon-custom-text").data("price");
   jQuery(".wc-pao-addon-custom-text").val(frame_value);
   jQuery(".wc-pao-addon-custom-text").hide();
@@ -11,6 +23,7 @@ jQuery(document).ready(function () {
   var baseUrl =
     getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split("/")[1];
   jQuery(".customize-cart-btn").click(function () {
+    var color_chosen = jQuery('.color-variable-wrapper li.selected').data('value');
     var ajax_url =
       baseUrl +
       "/wp-content/themes/flatsome-child/ajax/product_adons_session.php";
@@ -19,7 +32,7 @@ jQuery(document).ready(function () {
     jQuery.ajax({
       type: "post",
       url: ajax_url,
-      data: { frame_value: frame_value },
+      data: { frame_value: frame_value, color_chosen: color_chosen },
       success: function (response) {
         //location.href = baseUrl + '/lens-thinkness';
       },
@@ -228,3 +241,4 @@ jQuery("form.checkout.woocommerce-checkout").bind(
     }
   }
 );
+

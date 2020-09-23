@@ -27,6 +27,12 @@ if($post_slug !== 'lens-prescription') {
                     <span class="lens-type-price"><?php echo get_woocommerce_currency_symbol() . $_SESSION['frame_price']; ?></span>
                 <?php } ?>
                 <div class="clearfix"></div>
+                <?php
+                if($_SESSION['color']) { ?>
+                    <span class="lens-type-name">Color:</span>
+                    <span class="lens-type-price"><?php echo ucwords(str_replace("","",$_SESSION['color'])); ?></span>
+                <?php } ?>
+                <div class="clearfix"></div>
                 <?php if (!empty($_SESSION['custom-lens-name'])) {
                     $term = get_term_meta($_SESSION['custom-lens-id'], 'lens_price');
                     $explode_price = explode("$",$term[0]);

@@ -83,11 +83,19 @@ if (flatsome_option('facebook_login_checkout') && get_option('woocommerce_enable
                                     do_action('woocommerce_review_order_before_cart_contents');
                                     $lens_name = '';
                                     $lens_usage = '';
+                                    $color = '';
+                                    $lens_thicknes = '';
                                     foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
                                         $_product = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
 
                                         if ($_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters('woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key)) {
                                             foreach ($cart_item['variation'] as $key => $variation) {
+                                                if($key == 'Color') {
+                                                    $color = $variation;
+                                                }
+                                                if($key == 'Lens Thickness') {
+                                                    $lens_thicknes = $variation;
+                                                }
                                                 if ($key == 'Lens Name') {
                                                     $lens_name = $variation;
                                                 }
@@ -109,19 +117,34 @@ if (flatsome_option('facebook_login_checkout') && get_option('woocommerce_enable
                                                         ?>
                                             </h2>
                                             <?php
+                                            if($color) { ?>
+                                                <div>
+                                                    <div class="bold-text">Color</div>
+                                                    <div class="grey-text">
+                                                        <?php echo ucwords(str_replace("-", " ", $color)) ?></div>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if($lens_thicknes) { ?>
+                                                <div>
+                                                    <div class="bold-text">Lens Thickness</div>
+                                                    <div class="grey-text">
+                                                        <?php echo ucwords(str_replace("-", " ", $lens_thicknes)) ?></div>
+                                                </div>
+                                            <?php } ?>
+                                            <?php
                                                     if ($lens_name) {
                                                     ?>
                                             <div>
                                                 <div class="bold-text">Prescription Type</div>
                                                 <div class="grey-text">
-                                                    <?php echo ucwords(str_replace("-", " ", $variation)) ?></div>
+                                                    <?php echo ucwords(str_replace("-", " ", $lens_name)) ?></div>
                                             </div>
                                             <?php }
                                                     if ($lens_usage) { ?>
                                             <div>
                                                 <div class="bold-text">Lens Usage</div>
                                                 <div class="grey-text">
-                                                    <?php echo ucwords(str_replace("-", " ", $variation)) ?></div>
+                                                    <?php echo ucwords(str_replace("-", " ", $lens_usage)) ?></div>
                                             </div>
                                             <?php }
                                                 } ?>

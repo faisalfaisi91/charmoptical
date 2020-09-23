@@ -55,6 +55,7 @@ $html .= '<input type="hidden" value="'.$variation_id.'"> <h5>Please review your
                                         </div>
                                         <div class="col medium-6 frame-lens-details">
                                             <p><label>Frame:</label><span>'. $product->get_title() .'</span> <span class="lens-type-price">$'.$_SESSION['frame_price'].'</span></p>
+                                            <p><label>Color:</label><span>'.$_SESSION['color'].'</span></p>
                                             <p><label>Lens Type:</label> <span>'.str_replace("-"," ",ucwords($lens_type)).'</span><span class="lens-type-price">$'.$lens_type_price[1].'</span></p>
                                             <p>
                                             <label>Lens Usage:</label> <span>'.str_replace("-"," ",ucwords($usage)).'</span><span class="lens-type-price">$'.$usage_price.'</span></p>
