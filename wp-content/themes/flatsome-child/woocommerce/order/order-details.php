@@ -41,20 +41,23 @@ if ( $show_downloads ) {
 ?>
 <section class="woocommerce-order-details">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
-    <h2>Hi <?php echo $order->get_billing_first_name() ?>!</h2>
-    <h2>Thanks for your purchase!</h2>
+    <div class="basic-info large-10 col-center">
+        <h2>Hi <?php echo $order->get_billing_first_name() ?>!</h2>
+        <h2>Thanks for your purchase!</h2>
+    </div>
 
-	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order Confirmation', 'woocommerce' ); ?></h2>
-    <p><strong>Order No.</strong> #<?php echo $order->get_id() ?></p>
-    <p><strong><?php echo wc_format_datetime( $order->get_date_created() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong></p>
-    <h3>Customer Details:</h3>
+    <h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order Confirmation', 'woocommerce' ); ?></h2>
+    <div class="order-info col-center large-10">
+        <p class="order-no">Order No.</strong> #<?php echo $order->get_id() ?></p>
+        <p class="date"><?php echo wc_format_datetime( $order->get_date_created() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+    </div>
     <?php
         if ( $show_customer_details ) {
             wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
         }
     ?>
-    <h3>Order Summary</h3>
     <div class="checkout-details-block">
+        <h2>Order Summary</h2>
         <?php
         do_action( 'woocommerce_order_details_before_order_table_items', $order );
         $lens_name = '';
@@ -163,36 +166,20 @@ if ( $show_downloads ) {
 //			?>
 <!--		</tbody>-->
 
-		<tfoot>
-			<?php
-			foreach ( $order->get_order_item_totals() as $key => $total ) {
-			    if(esc_html( $total['label'] ) == 'Total:') { ?>
-                    <tr>
-                        <td colspan="2"><?php echo esc_html( $total['label'] ); ?> <?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
-                    </tr>
-                <?php } else { ?>
-					<tr>
-						<th scope="row"><?php echo esc_html( $total['label'] ); ?></th>
-						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
-					</tr>
-					<?php
-			    }
-            }
-			?>
-			<?php if ( $order->get_customer_note() ) : ?>
-				<tr>
-					<th><?php esc_html_e( 'Note:', 'woocommerce' ); ?></th>
-					<td><?php echo wp_kses_post( nl2br( wptexturize( $order->get_customer_note() ) ) ); ?></td>
-				</tr>
-			<?php endif; ?>
-		</tfoot>
-	</table>
-    <div class="order-all-status">
-        <p>We're getting your order ready to be shipped.</p>
-        <p>We will notify you when it has been sent.</p>
+    </table>
+    <div class="total">
+        <h2>Total: 200</h2>
     </div>
-    <div class="order-status-btn">
-        <a href="<?php echo site_url() ?>/my-account/view-order/<?php echo $order->get_id()?>">View Order Status</a>
+    <div class="row">
+        <div class="order-all-status large-7 col-center">
+            <p>We're getting your order ready to be shipped.</p>
+            <p>We will notify you when it has been sent.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="order-status-btn large-7 col-center">
+            <a href="<?php echo site_url() ?>/my-account/view-order/<?php echo $order->get_id()?>">View Order Status</a>
+        </div>
     </div>
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>
