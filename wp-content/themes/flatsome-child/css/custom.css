@@ -30,6 +30,7 @@ body {
   text-align: center;
 }
 
+
 .product-lenses .product-row .product-card h3,
 .product-lenses .product-row .product-card p {
   text-align: center;
@@ -224,6 +225,9 @@ body {
 .page-template-lens-prescription option {
   box-shadow: 5px 5px 5px #d4d4d4;
   background: #fff;
+}
+.page-template-lens-prescription .shop-container .form-wrapper .pd-measure-text {
+  text-align: center;
 }
 
 /* Loader Style */

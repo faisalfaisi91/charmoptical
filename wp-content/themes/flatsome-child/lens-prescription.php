@@ -1044,6 +1044,7 @@ $product_slug = $product->get_slug();
                                         number</a>
                                 </p>
                             </div>
+                            <p class="pd-measure-text"><strong><a href="javascript:;">How to measure PD</a></strong></p>
                         </div>
                     </div>
                     <!-- Custom Sidebar -->
