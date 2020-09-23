@@ -40,7 +40,7 @@ if (!empty($_SESSION['custom-lens-thickness-name'])) {
     $total += $thinkness_total;
 }
 $array = [
-    'attribute_pa_lens-thinkness' => $thickness_name,
+    'attribute_pa_lens-thickness' => $thickness_name,
     'attribute_pa_lens-type' => $lens_type,
     'attribute_pa_lens-usage' => $usage,
 ];

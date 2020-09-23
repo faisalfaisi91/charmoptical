@@ -34,7 +34,7 @@ jQuery(document).ready(function () {
       url: ajax_url,
       data: { frame_value: frame_value, color_chosen: color_chosen },
       success: function (response) {
-        //location.href = baseUrl + '/lens-thinkness';
+        //location.href = baseUrl + '/lens-thickness';
       },
       error: function (response) {
         //jQuery('#cover-spin').hide(0);
@@ -121,7 +121,7 @@ jQuery(document).ready(function () {
         url: ajax_url,
         data: data,
         success: function (response) {
-          location.href = baseUrl + "/lens-thinkness";
+          location.href = baseUrl + "/lens-thickness";
         },
         error: function (response) {
           jQuery("#cover-spin").hide(0);
@@ -215,7 +215,7 @@ function getConfirmationPopup(term_id, usage) {
 jQuery(document).ready(function () {
   jQuery(".xt_woovs-swatches-wrap table.variations tr td").each(function () {
     $this = jQuery(this);
-    $label_thinkness = jQuery('label[for="pa_lens-thinkness"]');
+    $label_thinkness = jQuery('label[for="pa_lens-thickness"]');
     $label_lens_type = jQuery('label[for="pa_lens-type"]');
     $label_lens_usage = jQuery('label[for="pa_lens-usage"]');
 

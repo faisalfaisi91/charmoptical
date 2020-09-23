@@ -34,7 +34,7 @@ $lens_usage = get_terms('pa_lens-usage');
                     <div class="sub-heading">
                         <p>Lens Usage</p>
                         <span class="back-icon">
-                            <a href="<?php echo site_url() ?>/lens-thinkness">
+                            <a href="<?php echo site_url() ?>/lens-thickness">
                                 <i class="fa fa-chevron-left"></i>
                             </a>
                         </span>

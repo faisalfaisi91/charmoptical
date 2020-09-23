@@ -23,7 +23,7 @@ $classes[] = 'has-hover';
 if ($out_of_stock) $classes[] = 'out-of-stock';
 $productID = $product->get_ID();
 $product_title = $product->get_title();
-$lens_thinkness = get_terms('pa_lens-thinkness');
+$lens_thinkness = get_terms('pa_lens-thickness');
 $right_sph = abs($_SESSION['right-sph']);
 $right_cyl = abs($_SESSION['right_cyl']);
 $left_sph = abs($_SESSION['left_sph']);
@@ -88,20 +88,20 @@ $left_sph_cyl = $left_sph + $left_cyl;
                                         if (function_exists('get_wp_term_image')) {
                                             $meta_image = get_wp_term_image($thinkness->term_id);
                                         }
-                                        if ($thinkness->name == 'Basic Thinkness' && ($right_sph_cyl >= 5 || $left_sph_cyl >= 5)) {
+                                        if ($thinkness->name == 'Basic Thickness' && ($right_sph_cyl >= 5 || $left_sph_cyl >= 5)) {
                                     ?>
                                     <div class="col medium-6 small-12 large-6 product-card">
                                         <?php } else { ?>
                                         <div class="col medium-6 small-12 large-6 product-card"
                                             onclick="selectLensUsage('<?php echo $thinkness->term_id ?>','<?php echo $thinkness->slug ?>')">
                                             <?php } ?>
-                                            <?php if ($thinkness->name == 'Basic Thinkness' && ($right_sph_cyl >= 5 || $left_sph_cyl >= 5)) {
+                                            <?php if ($thinkness->name == 'Basic Thickness' && ($right_sph_cyl >= 5 || $left_sph_cyl >= 5)) {
                                                 ?>
                                             <div class="disabled-text">Standard lens unavailable your
                                                 prescription requires lighter, thiner lenses
                                             </div>
                                             <?php }
-                                                if ($thinkness->name == 'Basic Thinkness' && ($right_sph_cyl >= 5 || $left_sph_cyl >= 5)) {
+                                                if ($thinkness->name == 'Basic Thickness' && ($right_sph_cyl >= 5 || $left_sph_cyl >= 5)) {
                                                     $basic_thin_disable = 'disabled-inner-card';
                                                 } else {
                                                     $basic_thin_disable = '';
